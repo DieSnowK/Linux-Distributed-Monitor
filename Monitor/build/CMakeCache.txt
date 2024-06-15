@@ -215,6 +215,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Display_BINARY_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display
+
+//Value Computed by CMake
+Display_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Display_SOURCE_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display
+
+//Value Computed by CMake
 Linux_Distributed_Monitor_BINARY_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build
 
 //Value Computed by CMake
@@ -222,6 +231,33 @@ Linux_Distributed_Monitor_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Linux_Distributed_Monitor_SOURCE_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor
+
+//Value Computed by CMake
+Monitor_BINARY_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor
+
+//Value Computed by CMake
+Monitor_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Monitor_SOURCE_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor
+
+//Value Computed by CMake
+ProtoBuf_BINARY_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf
+
+//Value Computed by CMake
+ProtoBuf_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+ProtoBuf_SOURCE_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/ProtoBuf
+
+//Value Computed by CMake
+RPC_BINARY_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/RPC
+
+//Value Computed by CMake
+RPC_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+RPC_SOURCE_DIR:STATIC=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC
 
 
 ########################
@@ -326,7 +362,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
