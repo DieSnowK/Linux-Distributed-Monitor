@@ -1,0 +1,9 @@
+syntax = "proto3";
+package monitor;
+
+message CpuLoad
+{
+    float load_avg_1 = 1;
+    float load_avg_2 = 2;
+    float load_avg_2 = 3;
+}
