@@ -13,6 +13,7 @@
 						3,
 						4
 					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10.2"
@@ -22,6 +23,7 @@
 				},
 				{
 					"build" : "RPC",
+					"jsonFile" : "directory-RPC-Debug-954c688517606cdf6bc5.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10.2"
@@ -32,6 +34,7 @@
 				},
 				{
 					"build" : "Monitor",
+					"jsonFile" : "directory-Monitor-Debug-2540688100658e0204c5.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10.2"
@@ -42,6 +45,7 @@
 				},
 				{
 					"build" : "ProtoBuf",
+					"jsonFile" : "directory-ProtoBuf-Debug-aa67c1d9894b7bc20c0e.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10.2"
@@ -52,6 +56,7 @@
 				},
 				{
 					"build" : "Display",
+					"jsonFile" : "directory-Display-Debug-52128923462d25cac63c.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10.2"
@@ -123,6 +128,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 0
+		"minor" : 7
 	}
 }
