@@ -4,6 +4,6 @@ package monitor;
 message CpuLoad
 {
     float load_avg_1 = 1;
-    float load_avg_2 = 2;
-    float load_avg_2 = 3;
+    float load_avg_3 = 2;
+    float load_avg_15 = 3;
 }

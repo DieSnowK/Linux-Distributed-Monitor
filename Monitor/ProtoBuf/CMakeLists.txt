@@ -9,7 +9,7 @@ find_package(c-ares CONFIG)
 
 # ProtoBuf/GRPC source files
 set(PROTO_FILES
-    Monitor_info.proto
+    Monitor_Info.proto
     Cpu_Load.proto
     Cpu_Softirq.proto
     Cpu_Stat.proto
