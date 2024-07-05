@@ -22,7 +22,7 @@
 namespace monitor {
 
 static const char* GrpcManager_method_names[] = {
-  "/monitor.GrpcManager/SetMonitor",
+  "/monitor.GrpcManager/SetMonitorInfo",
   "/monitor.GrpcManager/GetMonitorInfo",
 };
 
@@ -33,29 +33,29 @@ std::unique_ptr< GrpcManager::Stub> GrpcManager::NewStub(const std::shared_ptr< 
 }
 
 GrpcManager::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_SetMonitor_(GrpcManager_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_SetMonitorInfo_(GrpcManager_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetMonitorInfo_(GrpcManager_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status GrpcManager::Stub::SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::google::protobuf::Empty* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::monitor::MonitorInfo, ::google::protobuf::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SetMonitor_, context, request, response);
+::grpc::Status GrpcManager::Stub::SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::google::protobuf::Empty* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::monitor::MonitorInfo, ::google::protobuf::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SetMonitorInfo_, context, request, response);
 }
 
-void GrpcManager::Stub::async::SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::monitor::MonitorInfo, ::google::protobuf::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetMonitor_, context, request, response, std::move(f));
+void GrpcManager::Stub::async::SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::monitor::MonitorInfo, ::google::protobuf::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetMonitorInfo_, context, request, response, std::move(f));
 }
 
-void GrpcManager::Stub::async::SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetMonitor_, context, request, response, reactor);
+void GrpcManager::Stub::async::SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetMonitorInfo_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* GrpcManager::Stub::PrepareAsyncSetMonitorRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::google::protobuf::Empty, ::monitor::MonitorInfo, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_SetMonitor_, context, request);
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* GrpcManager::Stub::PrepareAsyncSetMonitorInfoRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::google::protobuf::Empty, ::monitor::MonitorInfo, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_SetMonitorInfo_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* GrpcManager::Stub::AsyncSetMonitorRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* GrpcManager::Stub::AsyncSetMonitorInfoRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncSetMonitorRaw(context, request, cq);
+    this->PrepareAsyncSetMonitorInfoRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -92,7 +92,7 @@ GrpcManager::Service::Service() {
              ::grpc::ServerContext* ctx,
              const ::monitor::MonitorInfo* req,
              ::google::protobuf::Empty* resp) {
-               return service->SetMonitor(ctx, req, resp);
+               return service->SetMonitorInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       GrpcManager_method_names[1],
@@ -109,7 +109,7 @@ GrpcManager::Service::Service() {
 GrpcManager::Service::~Service() {
 }
 
-::grpc::Status GrpcManager::Service::SetMonitor(::grpc::ServerContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response) {
+::grpc::Status GrpcManager::Service::SetMonitorInfo(::grpc::ServerContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response) {
   (void) context;
   (void) request;
   (void) response;

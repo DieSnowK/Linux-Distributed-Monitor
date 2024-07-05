@@ -26,4 +26,4 @@ namespace monitor
         *response = _monitorInfo;
         return ::grpc::Status::OK;
     }
-}
+} // end of namespace Monitor

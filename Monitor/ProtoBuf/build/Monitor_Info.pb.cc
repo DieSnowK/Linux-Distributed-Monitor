@@ -97,11 +97,11 @@ const char descriptor_table_protodef_Monitor_5fInfo_2eproto[] ABSL_ATTRIBUTE_SEC
     "SoftIrq\022\"\n\010cpu_load\030\003 \001(\0132\020.monitor.CpuL"
     "oad\022\"\n\010cpu_stat\030\004 \003(\0132\020.monitor.CpuStat\022"
     "\"\n\010mem_info\030\005 \001(\0132\020.monitor.MemInfo\022\"\n\010n"
-    "et_info\030\006 \003(\0132\020.monitor.NetInfo2\215\001\n\013Grpc"
-    "Manager\022<\n\nSetMonitor\022\024.monitor.MonitorI"
-    "nfo\032\026.google.protobuf.Empty\"\000\022@\n\016GetMoni"
-    "torInfo\022\026.google.protobuf.Empty\032\024.monito"
-    "r.MonitorInfo\"\000b\006proto3"
+    "et_info\030\006 \003(\0132\020.monitor.NetInfo2\221\001\n\013Grpc"
+    "Manager\022@\n\016SetMonitorInfo\022\024.monitor.Moni"
+    "torInfo\032\026.google.protobuf.Empty\"\000\022@\n\016Get"
+    "MonitorInfo\022\026.google.protobuf.Empty\032\024.mo"
+    "nitor.MonitorInfo\"\000b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_Monitor_5fInfo_2eproto_deps[6] =
     {
@@ -116,7 +116,7 @@ static ::absl::once_flag descriptor_table_Monitor_5fInfo_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_Monitor_5fInfo_2eproto = {
     false,
     false,
-    503,
+    507,
     descriptor_table_protodef_Monitor_5fInfo_2eproto,
     "Monitor_Info.proto",
     &descriptor_table_Monitor_5fInfo_2eproto_once,

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10.2)
 project(RPC_Server)
 
 # Modfified Later
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../ProtoBuf/build)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../ProtoBuf/build)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} SRC)
 # TODO set(EXECUTABLE_OUTPUT_PATH )
 

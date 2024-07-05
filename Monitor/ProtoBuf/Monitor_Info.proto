@@ -20,7 +20,7 @@ message MonitorInfo
 
 service GrpcManager
 {
-    rpc SetMonitor(MonitorInfo) returns (google.protobuf.Empty)
+    rpc SetMonitorInfo(MonitorInfo) returns (google.protobuf.Empty)
     {}
 
     rpc GetMonitorInfo(google.protobuf.Empty) returns (MonitorInfo)

@@ -35,12 +35,12 @@ class GrpcManager final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::google::protobuf::Empty* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncSetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncSetMonitorRaw(context, request, cq));
+    virtual ::grpc::Status SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::google::protobuf::Empty* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncSetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncSetMonitorInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncSetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncSetMonitorRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncSetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncSetMonitorInfoRaw(context, request, cq));
     }
     virtual ::grpc::Status GetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::monitor::MonitorInfo* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::monitor::MonitorInfo>> AsyncGetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
@@ -52,8 +52,8 @@ class GrpcManager final {
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::monitor::MonitorInfo* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::monitor::MonitorInfo* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
@@ -61,20 +61,20 @@ class GrpcManager final {
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncSetMonitorRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncSetMonitorRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncSetMonitorInfoRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncSetMonitorInfoRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::monitor::MonitorInfo>* AsyncGetMonitorInfoRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::monitor::MonitorInfo>* PrepareAsyncGetMonitorInfoRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::google::protobuf::Empty* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncSetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncSetMonitorRaw(context, request, cq));
+    ::grpc::Status SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::google::protobuf::Empty* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncSetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncSetMonitorInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncSetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncSetMonitorRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncSetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncSetMonitorInfoRaw(context, request, cq));
     }
     ::grpc::Status GetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::monitor::MonitorInfo* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::monitor::MonitorInfo>> AsyncGetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
@@ -86,8 +86,8 @@ class GrpcManager final {
     class async final :
       public StubInterface::async_interface {
      public:
-      void SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
-      void SetMonitor(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
+      void SetMonitorInfo(::grpc::ClientContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::monitor::MonitorInfo* response, std::function<void(::grpc::Status)>) override;
       void GetMonitorInfo(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::monitor::MonitorInfo* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
@@ -101,11 +101,11 @@ class GrpcManager final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncSetMonitorRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncSetMonitorRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncSetMonitorInfoRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncSetMonitorInfoRaw(::grpc::ClientContext* context, const ::monitor::MonitorInfo& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::monitor::MonitorInfo>* AsyncGetMonitorInfoRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::monitor::MonitorInfo>* PrepareAsyncGetMonitorInfoRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_SetMonitor_;
+    const ::grpc::internal::RpcMethod rpcmethod_SetMonitorInfo_;
     const ::grpc::internal::RpcMethod rpcmethod_GetMonitorInfo_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -114,26 +114,26 @@ class GrpcManager final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status SetMonitor(::grpc::ServerContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response);
+    virtual ::grpc::Status SetMonitorInfo(::grpc::ServerContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response);
     virtual ::grpc::Status GetMonitorInfo(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::monitor::MonitorInfo* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_SetMonitor : public BaseClass {
+  class WithAsyncMethod_SetMonitorInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_SetMonitor() {
+    WithAsyncMethod_SetMonitorInfo() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_SetMonitor() override {
+    ~WithAsyncMethod_SetMonitorInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SetMonitor(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
+    ::grpc::Status SetMonitorInfo(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSetMonitor(::grpc::ServerContext* context, ::monitor::MonitorInfo* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSetMonitorInfo(::grpc::ServerContext* context, ::monitor::MonitorInfo* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -157,32 +157,32 @@ class GrpcManager final {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_SetMonitor<WithAsyncMethod_GetMonitorInfo<Service > > AsyncService;
+  typedef WithAsyncMethod_SetMonitorInfo<WithAsyncMethod_GetMonitorInfo<Service > > AsyncService;
   template <class BaseClass>
-  class WithCallbackMethod_SetMonitor : public BaseClass {
+  class WithCallbackMethod_SetMonitorInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_SetMonitor() {
+    WithCallbackMethod_SetMonitorInfo() {
       ::grpc::Service::MarkMethodCallback(0,
           new ::grpc::internal::CallbackUnaryHandler< ::monitor::MonitorInfo, ::google::protobuf::Empty>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response) { return this->SetMonitor(context, request, response); }));}
-    void SetMessageAllocatorFor_SetMonitor(
+                   ::grpc::CallbackServerContext* context, const ::monitor::MonitorInfo* request, ::google::protobuf::Empty* response) { return this->SetMonitorInfo(context, request, response); }));}
+    void SetMessageAllocatorFor_SetMonitorInfo(
         ::grpc::MessageAllocator< ::monitor::MonitorInfo, ::google::protobuf::Empty>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::monitor::MonitorInfo, ::google::protobuf::Empty>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_SetMonitor() override {
+    ~WithCallbackMethod_SetMonitorInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SetMonitor(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
+    ::grpc::Status SetMonitorInfo(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* SetMonitor(
+    virtual ::grpc::ServerUnaryReactor* SetMonitorInfo(
       ::grpc::CallbackServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -212,21 +212,21 @@ class GrpcManager final {
     virtual ::grpc::ServerUnaryReactor* GetMonitorInfo(
       ::grpc::CallbackServerContext* /*context*/, const ::google::protobuf::Empty* /*request*/, ::monitor::MonitorInfo* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_SetMonitor<WithCallbackMethod_GetMonitorInfo<Service > > CallbackService;
+  typedef WithCallbackMethod_SetMonitorInfo<WithCallbackMethod_GetMonitorInfo<Service > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
-  class WithGenericMethod_SetMonitor : public BaseClass {
+  class WithGenericMethod_SetMonitorInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_SetMonitor() {
+    WithGenericMethod_SetMonitorInfo() {
       ::grpc::Service::MarkMethodGeneric(0);
     }
-    ~WithGenericMethod_SetMonitor() override {
+    ~WithGenericMethod_SetMonitorInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SetMonitor(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
+    ::grpc::Status SetMonitorInfo(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -249,22 +249,22 @@ class GrpcManager final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_SetMonitor : public BaseClass {
+  class WithRawMethod_SetMonitorInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_SetMonitor() {
+    WithRawMethod_SetMonitorInfo() {
       ::grpc::Service::MarkMethodRaw(0);
     }
-    ~WithRawMethod_SetMonitor() override {
+    ~WithRawMethod_SetMonitorInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SetMonitor(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
+    ::grpc::Status SetMonitorInfo(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSetMonitor(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSetMonitorInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -289,25 +289,25 @@ class GrpcManager final {
     }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_SetMonitor : public BaseClass {
+  class WithRawCallbackMethod_SetMonitorInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_SetMonitor() {
+    WithRawCallbackMethod_SetMonitorInfo() {
       ::grpc::Service::MarkMethodRawCallback(0,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SetMonitor(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SetMonitorInfo(context, request, response); }));
     }
-    ~WithRawCallbackMethod_SetMonitor() override {
+    ~WithRawCallbackMethod_SetMonitorInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SetMonitor(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
+    ::grpc::Status SetMonitorInfo(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* SetMonitor(
+    virtual ::grpc::ServerUnaryReactor* SetMonitorInfo(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -333,31 +333,31 @@ class GrpcManager final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_SetMonitor : public BaseClass {
+  class WithStreamedUnaryMethod_SetMonitorInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_SetMonitor() {
+    WithStreamedUnaryMethod_SetMonitorInfo() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::monitor::MonitorInfo, ::google::protobuf::Empty>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
                      ::monitor::MonitorInfo, ::google::protobuf::Empty>* streamer) {
-                       return this->StreamedSetMonitor(context,
+                       return this->StreamedSetMonitorInfo(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_SetMonitor() override {
+    ~WithStreamedUnaryMethod_SetMonitorInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SetMonitor(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
+    ::grpc::Status SetMonitorInfo(::grpc::ServerContext* /*context*/, const ::monitor::MonitorInfo* /*request*/, ::google::protobuf::Empty* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedSetMonitor(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::monitor::MonitorInfo,::google::protobuf::Empty>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedSetMonitorInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::monitor::MonitorInfo,::google::protobuf::Empty>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetMonitorInfo : public BaseClass {
@@ -386,9 +386,9 @@ class GrpcManager final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetMonitorInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::google::protobuf::Empty,::monitor::MonitorInfo>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_SetMonitor<WithStreamedUnaryMethod_GetMonitorInfo<Service > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_SetMonitorInfo<WithStreamedUnaryMethod_GetMonitorInfo<Service > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_SetMonitor<WithStreamedUnaryMethod_GetMonitorInfo<Service > > StreamedService;
+  typedef WithStreamedUnaryMethod_SetMonitorInfo<WithStreamedUnaryMethod_GetMonitorInfo<Service > > StreamedService;
 };
 
 }  // namespace monitor
