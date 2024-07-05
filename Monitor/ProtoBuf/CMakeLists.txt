@@ -19,18 +19,16 @@ set(PROTO_FILES
 
 # Add Library target with Protobuf sources
 add_library(monitor_proto STATIC ${PROTO_FILES})
-target_link_libraries(monitor_proto
-    PUBLIC
-        protobuf::libprotobuf
-        gRPC::grpc
-        gRPC::grpc++
+target_link_libraries(monitor_proto PUBLIC
+    protobuf::libprotobuf
+    gRPC::grpc
+    gRPC::grpc++
 )
 
 # TODO target_include
-target_include_directories(monitor_proto
-    PUBLIC
-        ${PROTOBUF_INCLUDE_DIRS}
-        ${CMAKE_CURRENT_BINARY_DIR}
+target_include_directories(monitor_proto PUBLIC
+    ${PROTOBUF_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 # Compile Protobuf and GRPC files in monitor proto target to cpp
