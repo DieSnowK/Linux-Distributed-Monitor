@@ -8,7 +8,7 @@ namespace monitor
         Utils::ReadFile cpu_load_file("/proc/loadavg");
         std::vector<std::string> cpu_loads;
 
-        cpu_load_file.ReadLine(&cpu_load);
+        cpu_load_file.ReadLine(&cpu_loads);
         _load_avg_1 = stof(cpu_loads[0]);
         _load_avg_3 = stof(cpu_loads[1]);
         _load_avg_15 = stof(cpu_loads[2]);
