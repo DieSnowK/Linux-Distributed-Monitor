@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DCARES_STATICLIB
 
-CXX_INCLUDES = -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/../../ProtoBuf/build -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf
+CXX_INCLUDES = -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf
 
 CXX_FLAGS = -g
 

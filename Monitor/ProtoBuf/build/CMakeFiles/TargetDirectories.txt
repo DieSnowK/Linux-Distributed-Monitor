@@ -1,3 +1,0 @@
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/ProtoBuf/build/CMakeFiles/monitor_proto.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/ProtoBuf/build/CMakeFiles/edit_cache.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/ProtoBuf/build/CMakeFiles/rebuild_cache.dir

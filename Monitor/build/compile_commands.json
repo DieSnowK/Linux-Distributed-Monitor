@@ -1,17 +1,17 @@
 [
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/RPC/Client",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Client/../../ProtoBuf/build -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/client.dir/rpc_client.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Client/rpc_client.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/client.dir/rpc_client.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Client/rpc_client.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Client/rpc_client.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/RPC/Server",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/../../ProtoBuf/build -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/server.dir/main.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/main.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/server.dir/main.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/main.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/main.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/RPC/Server",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/../../ProtoBuf/build -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/server.dir/rpc_manager.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/rpc_manager.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/server.dir/rpc_manager.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/rpc_manager.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/Server/rpc_manager.cpp"
 },
 {

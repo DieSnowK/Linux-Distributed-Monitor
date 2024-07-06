@@ -1,7 +1,7 @@
 # RPC_Serve
 
 # Modfified Later
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../ProtoBuf/build)
+include_directories(${PROJECT_SOURCE_DIR}/build/ProtoBuf)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} SRC)
 # TODO set(EXECUTABLE_OUTPUT_PATH )
 
