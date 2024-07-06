@@ -21,7 +21,7 @@ namespace monitor
 
         class ReadFile
         {
-            explicit ReadFile(const std::string &name)
+            ReadFile(const std::string &name)
                 : _ifs(name)
             {}
 
