@@ -16,38 +16,38 @@
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/main.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/main.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/main.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/main.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/main.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/cpu_load_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_load_monitor.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/cpu_load_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_load_monitor.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_load_monitor.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/cpu_softirq_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_softirq_monitor.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/cpu_softirq_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_softirq_monitor.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_softirq_monitor.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/cpu_stat_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_stat_monitor.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/cpu_stat_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_stat_monitor.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_stat_monitor.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/mem_monitor.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/mem_monitor.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/mem_monitor.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/net_monitor.cpp",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/net_monitor.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/net_monitor.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor",
-  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/utils/read_file.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/read_file.cpp",
-  "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/read_file.cpp"
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -g -o CMakeFiles/monitor.dir/src/utils/utils.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/utils.cpp",
+  "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/utils.cpp"
 },
 {
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf",

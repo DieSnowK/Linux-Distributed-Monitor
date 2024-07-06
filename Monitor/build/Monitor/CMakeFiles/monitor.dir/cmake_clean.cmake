@@ -11,8 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o.d"
   "CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o"
   "CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o.d"
-  "CMakeFiles/monitor.dir/src/utils/read_file.cpp.o"
-  "CMakeFiles/monitor.dir/src/utils/read_file.cpp.o.d"
+  "CMakeFiles/monitor.dir/src/utils/utils.cpp.o"
+  "CMakeFiles/monitor.dir/src/utils/utils.cpp.o.d"
   "monitor"
   "monitor.pdb"
 )

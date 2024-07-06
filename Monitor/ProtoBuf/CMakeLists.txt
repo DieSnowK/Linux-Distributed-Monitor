@@ -1,5 +1,4 @@
-cmake_minimum_required(VERSION 3.10.2)
-project(ProtoBuf)
+# ProtoBuf
 
 # 自动查找并加载外部软件包或库
 # CONFIG 使用配置模式

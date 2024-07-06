@@ -274,29 +274,29 @@ src/monitor/net_monitor.cpp.s:
 	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.s
 .PHONY : src/monitor/net_monitor.cpp.s
 
-src/utils/read_file.o: src/utils/read_file.cpp.o
-.PHONY : src/utils/read_file.o
+src/utils/utils.o: src/utils/utils.cpp.o
+.PHONY : src/utils/utils.o
 
 # target to build an object file
-src/utils/read_file.cpp.o:
-	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o
-.PHONY : src/utils/read_file.cpp.o
+src/utils/utils.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o
+.PHONY : src/utils/utils.cpp.o
 
-src/utils/read_file.i: src/utils/read_file.cpp.i
-.PHONY : src/utils/read_file.i
+src/utils/utils.i: src/utils/utils.cpp.i
+.PHONY : src/utils/utils.i
 
 # target to preprocess a source file
-src/utils/read_file.cpp.i:
-	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.i
-.PHONY : src/utils/read_file.cpp.i
+src/utils/utils.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.i
+.PHONY : src/utils/utils.cpp.i
 
-src/utils/read_file.s: src/utils/read_file.cpp.s
-.PHONY : src/utils/read_file.s
+src/utils/utils.s: src/utils/utils.cpp.s
+.PHONY : src/utils/utils.s
 
 # target to generate assembly for a file
-src/utils/read_file.cpp.s:
-	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.s
-.PHONY : src/utils/read_file.cpp.s
+src/utils/utils.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Monitor/CMakeFiles/monitor.dir/build.make Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.s
+.PHONY : src/utils/utils.cpp.s
 
 # Help Target
 help:
@@ -325,9 +325,9 @@ help:
 	@echo "... src/monitor/net_monitor.o"
 	@echo "... src/monitor/net_monitor.i"
 	@echo "... src/monitor/net_monitor.s"
-	@echo "... src/utils/read_file.o"
-	@echo "... src/utils/read_file.i"
-	@echo "... src/utils/read_file.s"
+	@echo "... src/utils/utils.o"
+	@echo "... src/utils/utils.i"
+	@echo "... src/utils/utils.s"
 .PHONY : help
 
 

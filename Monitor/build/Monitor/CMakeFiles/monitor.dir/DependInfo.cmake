@@ -14,7 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/cpu_stat_monitor.cpp" "Monitor/CMakeFiles/monitor.dir/src/monitor/cpu_stat_monitor.cpp.o" "gcc" "Monitor/CMakeFiles/monitor.dir/src/monitor/cpu_stat_monitor.cpp.o.d"
   "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/mem_monitor.cpp" "Monitor/CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o" "gcc" "Monitor/CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o.d"
   "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/net_monitor.cpp" "Monitor/CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o" "gcc" "Monitor/CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o.d"
-  "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/read_file.cpp" "Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o" "gcc" "Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o.d"
+  "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/utils.cpp" "Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o" "gcc" "Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o.d"
   )
 
 # Targets to which this target links.

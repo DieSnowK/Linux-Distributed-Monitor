@@ -34,7 +34,7 @@
 						"string" : "3.10.2"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 1,
+					"projectIndex" : 0,
 					"source" : "RPC"
 				},
 				{
@@ -45,7 +45,7 @@
 						"string" : "3.10.2"
 					},
 					"parentIndex" : 1,
-					"projectIndex" : 2,
+					"projectIndex" : 0,
 					"source" : "RPC/Client",
 					"targetIndexes" : 
 					[
@@ -60,7 +60,7 @@
 						"string" : "3.10.2"
 					},
 					"parentIndex" : 1,
-					"projectIndex" : 3,
+					"projectIndex" : 0,
 					"source" : "RPC/Server",
 					"targetIndexes" : 
 					[
@@ -75,7 +75,7 @@
 						"string" : "3.10.2"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 4,
+					"projectIndex" : 0,
 					"source" : "Monitor",
 					"targetIndexes" : 
 					[
@@ -90,7 +90,7 @@
 						"string" : "3.10.2"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 5,
+					"projectIndex" : 0,
 					"source" : "ProtoBuf",
 					"targetIndexes" : 
 					[
@@ -105,7 +105,7 @@
 						"string" : "3.10.2"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 6,
+					"projectIndex" : 0,
 					"source" : "Display"
 				}
 			],
@@ -113,87 +113,24 @@
 			"projects" : 
 			[
 				{
-					"childIndexes" : 
+					"directoryIndexes" : 
 					[
+						0,
 						1,
+						2,
+						3,
 						4,
 						5,
 						6
 					],
-					"directoryIndexes" : 
+					"name" : "Linux_Distributed_Monitor",
+					"targetIndexes" : 
 					[
-						0
-					],
-					"name" : "Linux_Distributed_Monitor"
-				},
-				{
-					"childIndexes" : 
-					[
+						0,
+						1,
 						2,
 						3
-					],
-					"directoryIndexes" : 
-					[
-						1
-					],
-					"name" : "RPC",
-					"parentIndex" : 0
-				},
-				{
-					"directoryIndexes" : 
-					[
-						2
-					],
-					"name" : "RPC_Client",
-					"parentIndex" : 1,
-					"targetIndexes" : 
-					[
-						0
 					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						3
-					],
-					"name" : "RPC_Server",
-					"parentIndex" : 1,
-					"targetIndexes" : 
-					[
-						3
-					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						4
-					],
-					"name" : "Monitor",
-					"parentIndex" : 0,
-					"targetIndexes" : 
-					[
-						1
-					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						5
-					],
-					"name" : "ProtoBuf",
-					"parentIndex" : 0,
-					"targetIndexes" : 
-					[
-						2
-					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						6
-					],
-					"name" : "Display",
-					"parentIndex" : 0
 				}
 			],
 			"targets" : 
@@ -201,30 +138,30 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "client::@d3ab0359f2ee16939114",
-					"jsonFile" : "target-client-Debug-20621c4347512b568810.json",
+					"jsonFile" : "target-client-Debug-63c94a8e8c4cb21d7dcb.json",
 					"name" : "client",
-					"projectIndex" : 2
+					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "monitor::@3add924a82373c909690",
-					"jsonFile" : "target-monitor-Debug-4bbcafbac4421a5ae0ae.json",
+					"jsonFile" : "target-monitor-Debug-c2758f7470b0e1458c3a.json",
 					"name" : "monitor",
-					"projectIndex" : 4
+					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "monitor_proto::@85092f65f94d7ce0f2a3",
-					"jsonFile" : "target-monitor_proto-Debug-4d13a5373370c059ca8f.json",
+					"jsonFile" : "target-monitor_proto-Debug-2bcd5d42e87a2a7d3f42.json",
 					"name" : "monitor_proto",
-					"projectIndex" : 5
+					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "server::@fe5e38ea8cbf268e754d",
-					"jsonFile" : "target-server-Debug-7f279af90996d758157d.json",
+					"jsonFile" : "target-server-Debug-cae6b91d377eb658f498.json",
 					"name" : "server",
-					"projectIndex" : 3
+					"projectIndex" : 0
 				}
 			]
 		}

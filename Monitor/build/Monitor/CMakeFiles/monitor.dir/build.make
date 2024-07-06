@@ -153,19 +153,19 @@ Monitor/CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.s"
 	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/monitor/net_monitor.cpp -o CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.s
 
-Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o: Monitor/CMakeFiles/monitor.dir/flags.make
-Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o: ../Monitor/src/utils/read_file.cpp
-Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o: Monitor/CMakeFiles/monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o"
-	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o -MF CMakeFiles/monitor.dir/src/utils/read_file.cpp.o.d -o CMakeFiles/monitor.dir/src/utils/read_file.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/read_file.cpp
+Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o: Monitor/CMakeFiles/monitor.dir/flags.make
+Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o: ../Monitor/src/utils/utils.cpp
+Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o: Monitor/CMakeFiles/monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o"
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o -MF CMakeFiles/monitor.dir/src/utils/utils.cpp.o.d -o CMakeFiles/monitor.dir/src/utils/utils.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/utils.cpp
 
-Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monitor.dir/src/utils/read_file.cpp.i"
-	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/read_file.cpp > CMakeFiles/monitor.dir/src/utils/read_file.cpp.i
+Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monitor.dir/src/utils/utils.cpp.i"
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/utils.cpp > CMakeFiles/monitor.dir/src/utils/utils.cpp.i
 
-Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monitor.dir/src/utils/read_file.cpp.s"
-	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/read_file.cpp -o CMakeFiles/monitor.dir/src/utils/read_file.cpp.s
+Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monitor.dir/src/utils/utils.cpp.s"
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Monitor/src/utils/utils.cpp -o CMakeFiles/monitor.dir/src/utils/utils.cpp.s
 
 # Object files for target monitor
 monitor_OBJECTS = \
@@ -175,7 +175,7 @@ monitor_OBJECTS = \
 "CMakeFiles/monitor.dir/src/monitor/cpu_stat_monitor.cpp.o" \
 "CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o" \
 "CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o" \
-"CMakeFiles/monitor.dir/src/utils/read_file.cpp.o"
+"CMakeFiles/monitor.dir/src/utils/utils.cpp.o"
 
 # External object files for target monitor
 monitor_EXTERNAL_OBJECTS =
@@ -186,7 +186,7 @@ Monitor/monitor: Monitor/CMakeFiles/monitor.dir/src/monitor/cpu_softirq_monitor.
 Monitor/monitor: Monitor/CMakeFiles/monitor.dir/src/monitor/cpu_stat_monitor.cpp.o
 Monitor/monitor: Monitor/CMakeFiles/monitor.dir/src/monitor/mem_monitor.cpp.o
 Monitor/monitor: Monitor/CMakeFiles/monitor.dir/src/monitor/net_monitor.cpp.o
-Monitor/monitor: Monitor/CMakeFiles/monitor.dir/src/utils/read_file.cpp.o
+Monitor/monitor: Monitor/CMakeFiles/monitor.dir/src/utils/utils.cpp.o
 Monitor/monitor: Monitor/CMakeFiles/monitor.dir/build.make
 Monitor/monitor: ProtoBuf/libmonitor_proto.a
 Monitor/monitor: RPC/Client/libclient.a
