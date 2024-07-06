@@ -42,3 +42,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/RPC/Client/cmake_install.cmake")
+  include("/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/RPC/Server/cmake_install.cmake")
+
+endif()
+

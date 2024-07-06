@@ -1,0 +1,243 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "RPC",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-RPC-Debug-954c688517606cdf6bc5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "RPC"
+				},
+				{
+					"build" : "RPC/Client",
+					"jsonFile" : "directory-RPC.Client-Debug-ddc09c63bf1a1503edd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "RPC/Client",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "RPC/Server",
+					"jsonFile" : "directory-RPC.Server-Debug-57164875612848aa101c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "RPC/Server",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "Monitor",
+					"jsonFile" : "directory-Monitor-Debug-2540688100658e0204c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "Monitor",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "ProtoBuf",
+					"jsonFile" : "directory-ProtoBuf-Debug-aa67c1d9894b7bc20c0e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "ProtoBuf",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Display",
+					"jsonFile" : "directory-Display-Debug-52128923462d25cac63c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "Display"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						4,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Linux_Distributed_Monitor"
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "RPC",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "RPC_Client",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "RPC_Server",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "Monitor",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "ProtoBuf",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "Display",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "client::@d3ab0359f2ee16939114",
+					"jsonFile" : "target-client-Debug-20621c4347512b568810.json",
+					"name" : "client",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "monitor::@3add924a82373c909690",
+					"jsonFile" : "target-monitor-Debug-4bbcafbac4421a5ae0ae.json",
+					"name" : "monitor",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "monitor_proto::@85092f65f94d7ce0f2a3",
+					"jsonFile" : "target-monitor_proto-Debug-4d13a5373370c059ca8f.json",
+					"name" : "monitor_proto",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "server::@fe5e38ea8cbf268e754d",
+					"jsonFile" : "target-server-Debug-7f279af90996d758157d.json",
+					"name" : "server",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build",
+		"source" : "/home/snowk/repository/Linux-Distributed-Monitor/Monitor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
