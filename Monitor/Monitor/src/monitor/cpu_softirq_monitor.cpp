@@ -55,6 +55,6 @@ namespace monitor
             }
 
             _cpu_softirq_map[name] = info;
-        }
+        } // end of for (int i = 0; i < softirq[0].size() - 1; ++i)
     }
 } // end of namespace monitor

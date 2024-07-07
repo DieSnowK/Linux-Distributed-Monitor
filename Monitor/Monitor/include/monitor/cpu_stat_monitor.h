@@ -14,12 +14,12 @@ namespace monitor
         {
             std::string cpu_name;
             float user;
+            float nice;
             float system;
             float idle;
-            float nice;
             float io_wait;
             float irq;
-            float sort_irq;
+            float soft_irq;
             float steal;
             float guest;
             float guest_nice;

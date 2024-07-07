@@ -198,7 +198,7 @@ class CpuStat final : public ::google::protobuf::Message
     kIdlePercentFieldNumber = 6,
     kIoWaitPercentFieldNumber = 7,
     kIrqPercentFieldNumber = 8,
-    kSortIrqPercentFieldNumber = 9,
+    kSoftIrqPercentFieldNumber = 9,
   };
   // string cpu_name = 1;
   void clear_cpu_name() ;
@@ -286,14 +286,14 @@ class CpuStat final : public ::google::protobuf::Message
   void _internal_set_irq_percent(float value);
 
   public:
-  // float sort_irq_percent = 9;
-  void clear_sort_irq_percent() ;
-  float sort_irq_percent() const;
-  void set_sort_irq_percent(float value);
+  // float soft_irq_percent = 9;
+  void clear_soft_irq_percent() ;
+  float soft_irq_percent() const;
+  void set_soft_irq_percent(float value);
 
   private:
-  float _internal_sort_irq_percent() const;
-  void _internal_set_sort_irq_percent(float value);
+  float _internal_soft_irq_percent() const;
+  void _internal_set_soft_irq_percent(float value);
 
   public:
   // @@protoc_insertion_point(class_scope:monitor.CpuStat)
@@ -330,7 +330,7 @@ class CpuStat final : public ::google::protobuf::Message
     float idle_percent_;
     float io_wait_percent_;
     float irq_percent_;
-    float sort_irq_percent_;
+    float soft_irq_percent_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -558,26 +558,26 @@ inline void CpuStat::_internal_set_irq_percent(float value) {
   _impl_.irq_percent_ = value;
 }
 
-// float sort_irq_percent = 9;
-inline void CpuStat::clear_sort_irq_percent() {
+// float soft_irq_percent = 9;
+inline void CpuStat::clear_soft_irq_percent() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.sort_irq_percent_ = 0;
+  _impl_.soft_irq_percent_ = 0;
 }
-inline float CpuStat::sort_irq_percent() const {
-  // @@protoc_insertion_point(field_get:monitor.CpuStat.sort_irq_percent)
-  return _internal_sort_irq_percent();
+inline float CpuStat::soft_irq_percent() const {
+  // @@protoc_insertion_point(field_get:monitor.CpuStat.soft_irq_percent)
+  return _internal_soft_irq_percent();
 }
-inline void CpuStat::set_sort_irq_percent(float value) {
-  _internal_set_sort_irq_percent(value);
-  // @@protoc_insertion_point(field_set:monitor.CpuStat.sort_irq_percent)
+inline void CpuStat::set_soft_irq_percent(float value) {
+  _internal_set_soft_irq_percent(value);
+  // @@protoc_insertion_point(field_set:monitor.CpuStat.soft_irq_percent)
 }
-inline float CpuStat::_internal_sort_irq_percent() const {
+inline float CpuStat::_internal_soft_irq_percent() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.sort_irq_percent_;
+  return _impl_.soft_irq_percent_;
 }
-inline void CpuStat::_internal_set_sort_irq_percent(float value) {
+inline void CpuStat::_internal_set_soft_irq_percent(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.sort_irq_percent_ = value;
+  _impl_.soft_irq_percent_ = value;
 }
 
 #ifdef __GNUC__

@@ -37,7 +37,7 @@ inline constexpr CpuStat::Impl_::Impl_(
         idle_percent_{0},
         io_wait_percent_{0},
         irq_percent_{0},
-        sort_irq_percent_{0},
+        soft_irq_percent_{0},
         _cached_size_{0} {}
 
 template <typename>
@@ -77,7 +77,7 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::monitor::CpuStat, _impl_.idle_percent_),
         PROTOBUF_FIELD_OFFSET(::monitor::CpuStat, _impl_.io_wait_percent_),
         PROTOBUF_FIELD_OFFSET(::monitor::CpuStat, _impl_.irq_percent_),
-        PROTOBUF_FIELD_OFFSET(::monitor::CpuStat, _impl_.sort_irq_percent_),
+        PROTOBUF_FIELD_OFFSET(::monitor::CpuStat, _impl_.soft_irq_percent_),
 };
 
 static const ::_pbi::MigrationSchema
@@ -94,7 +94,7 @@ const char descriptor_table_protodef_Cpu_5fStat_2eproto[] ABSL_ATTRIBUTE_SECTION
     "usr_percent\030\003 \001(\002\022\023\n\013sys_percent\030\004 \001(\002\022\024"
     "\n\014nice_percent\030\005 \001(\002\022\024\n\014idle_percent\030\006 \001"
     "(\002\022\027\n\017io_wait_percent\030\007 \001(\002\022\023\n\013irq_perce"
-    "nt\030\010 \001(\002\022\030\n\020sort_irq_percent\030\t \001(\002b\006prot"
+    "nt\030\010 \001(\002\022\030\n\020soft_irq_percent\030\t \001(\002b\006prot"
     "o3"
 };
 static ::absl::once_flag descriptor_table_Cpu_5fStat_2eproto_once;
@@ -145,9 +145,9 @@ CpuStat::CpuStat(
                offsetof(Impl_, cpu_percent_),
            reinterpret_cast<const char *>(&from._impl_) +
                offsetof(Impl_, cpu_percent_),
-           offsetof(Impl_, sort_irq_percent_) -
+           offsetof(Impl_, soft_irq_percent_) -
                offsetof(Impl_, cpu_percent_) +
-               sizeof(Impl_::sort_irq_percent_));
+               sizeof(Impl_::soft_irq_percent_));
 
   // @@protoc_insertion_point(copy_constructor:monitor.CpuStat)
 }
@@ -162,9 +162,9 @@ inline void CpuStat::SharedCtor(::_pb::Arena* arena) {
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, cpu_percent_),
            0,
-           offsetof(Impl_, sort_irq_percent_) -
+           offsetof(Impl_, soft_irq_percent_) -
                offsetof(Impl_, cpu_percent_) +
-               sizeof(Impl_::sort_irq_percent_));
+               sizeof(Impl_::soft_irq_percent_));
 }
 CpuStat::~CpuStat() {
   // @@protoc_insertion_point(destructor:monitor.CpuStat)
@@ -241,9 +241,9 @@ const ::_pbi::TcParseTable<4, 9, 0, 40, 2> CpuStat::_table_ = {
     // float irq_percent = 8;
     {::_pbi::TcParser::FastF32S1,
      {69, 63, 0, PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.irq_percent_)}},
-    // float sort_irq_percent = 9;
+    // float soft_irq_percent = 9;
     {::_pbi::TcParser::FastF32S1,
-     {77, 63, 0, PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.sort_irq_percent_)}},
+     {77, 63, 0, PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.soft_irq_percent_)}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
@@ -277,8 +277,8 @@ const ::_pbi::TcParseTable<4, 9, 0, 40, 2> CpuStat::_table_ = {
     // float irq_percent = 8;
     {PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.irq_percent_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // float sort_irq_percent = 9;
-    {PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.sort_irq_percent_), 0, 0,
+    // float soft_irq_percent = 9;
+    {PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.soft_irq_percent_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }},
   // no aux_entries
@@ -298,8 +298,8 @@ PROTOBUF_NOINLINE void CpuStat::Clear() {
 
   _impl_.cpu_name_.ClearToEmpty();
   ::memset(&_impl_.cpu_percent_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.sort_irq_percent_) -
-      reinterpret_cast<char*>(&_impl_.cpu_percent_)) + sizeof(_impl_.sort_irq_percent_));
+      reinterpret_cast<char*>(&_impl_.soft_irq_percent_) -
+      reinterpret_cast<char*>(&_impl_.cpu_percent_)) + sizeof(_impl_.soft_irq_percent_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -402,16 +402,16 @@ PROTOBUF_NOINLINE void CpuStat::Clear() {
         8, this->_internal_irq_percent(), target);
   }
 
-  // float sort_irq_percent = 9;
+  // float soft_irq_percent = 9;
   static_assert(sizeof(::uint32_t) == sizeof(float),
                 "Code assumes ::uint32_t and float are the same size.");
-  float tmp_sort_irq_percent = this->_internal_sort_irq_percent();
-  ::uint32_t raw_sort_irq_percent;
-  memcpy(&raw_sort_irq_percent, &tmp_sort_irq_percent, sizeof(tmp_sort_irq_percent));
-  if (raw_sort_irq_percent != 0) {
+  float tmp_soft_irq_percent = this->_internal_soft_irq_percent();
+  ::uint32_t raw_soft_irq_percent;
+  memcpy(&raw_soft_irq_percent, &tmp_soft_irq_percent, sizeof(tmp_soft_irq_percent));
+  if (raw_soft_irq_percent != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        9, this->_internal_sort_irq_percent(), target);
+        9, this->_internal_soft_irq_percent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -508,13 +508,13 @@ PROTOBUF_NOINLINE void CpuStat::Clear() {
     total_size += 5;
   }
 
-  // float sort_irq_percent = 9;
+  // float soft_irq_percent = 9;
   static_assert(sizeof(::uint32_t) == sizeof(float),
                 "Code assumes ::uint32_t and float are the same size.");
-  float tmp_sort_irq_percent = this->_internal_sort_irq_percent();
-  ::uint32_t raw_sort_irq_percent;
-  memcpy(&raw_sort_irq_percent, &tmp_sort_irq_percent, sizeof(tmp_sort_irq_percent));
-  if (raw_sort_irq_percent != 0) {
+  float tmp_soft_irq_percent = this->_internal_soft_irq_percent();
+  ::uint32_t raw_soft_irq_percent;
+  memcpy(&raw_soft_irq_percent, &tmp_soft_irq_percent, sizeof(tmp_soft_irq_percent));
+  if (raw_soft_irq_percent != 0) {
     total_size += 5;
   }
 
@@ -591,11 +591,11 @@ void CpuStat::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
   }
   static_assert(sizeof(::uint32_t) == sizeof(float),
                 "Code assumes ::uint32_t and float are the same size.");
-  float tmp_sort_irq_percent = from._internal_sort_irq_percent();
-  ::uint32_t raw_sort_irq_percent;
-  memcpy(&raw_sort_irq_percent, &tmp_sort_irq_percent, sizeof(tmp_sort_irq_percent));
-  if (raw_sort_irq_percent != 0) {
-    _this->_impl_.sort_irq_percent_ = from._impl_.sort_irq_percent_;
+  float tmp_soft_irq_percent = from._internal_soft_irq_percent();
+  ::uint32_t raw_soft_irq_percent;
+  memcpy(&raw_soft_irq_percent, &tmp_soft_irq_percent, sizeof(tmp_soft_irq_percent));
+  if (raw_soft_irq_percent != 0) {
+    _this->_impl_.soft_irq_percent_ = from._impl_.soft_irq_percent_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -615,8 +615,8 @@ void CpuStat::InternalSwap(CpuStat* PROTOBUF_RESTRICT other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.cpu_name_, &other->_impl_.cpu_name_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.sort_irq_percent_)
-      + sizeof(CpuStat::_impl_.sort_irq_percent_)
+      PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.soft_irq_percent_)
+      + sizeof(CpuStat::_impl_.soft_irq_percent_)
       - PROTOBUF_FIELD_OFFSET(CpuStat, _impl_.cpu_percent_)>(
           reinterpret_cast<char*>(&_impl_.cpu_percent_),
           reinterpret_cast<char*>(&other->_impl_.cpu_percent_));

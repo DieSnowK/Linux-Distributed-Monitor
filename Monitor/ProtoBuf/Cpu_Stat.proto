@@ -11,5 +11,5 @@ message CpuStat
     float idle_percent = 6;
     float io_wait_percent = 7;
     float irq_percent = 8;
-    float sort_irq_percent = 9;
+    float soft_irq_percent = 9;
 }
