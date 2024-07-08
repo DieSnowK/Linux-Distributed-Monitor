@@ -116,6 +116,226 @@ depend:
 	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+Display/CMakeFiles/display.dir/rule:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Display/CMakeFiles/display.dir/rule
+.PHONY : Display/CMakeFiles/display.dir/rule
+
+# Convenience name for target.
+display: Display/CMakeFiles/display.dir/rule
+.PHONY : display
+
+# fast build rule for target.
+display/fast:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/build
+.PHONY : display/fast
+
+# Convenience name for target.
+Display/CMakeFiles/display_autogen.dir/rule:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Display/CMakeFiles/display_autogen.dir/rule
+.PHONY : Display/CMakeFiles/display_autogen.dir/rule
+
+# Convenience name for target.
+display_autogen: Display/CMakeFiles/display_autogen.dir/rule
+.PHONY : display_autogen
+
+# fast build rule for target.
+display_autogen/fast:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display_autogen.dir/build.make Display/CMakeFiles/display_autogen.dir/build
+.PHONY : display_autogen/fast
+
+display_autogen/mocs_compilation.o: display_autogen/mocs_compilation.cpp.o
+.PHONY : display_autogen/mocs_compilation.o
+
+# target to build an object file
+display_autogen/mocs_compilation.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.o
+.PHONY : display_autogen/mocs_compilation.cpp.o
+
+display_autogen/mocs_compilation.i: display_autogen/mocs_compilation.cpp.i
+.PHONY : display_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+display_autogen/mocs_compilation.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.i
+.PHONY : display_autogen/mocs_compilation.cpp.i
+
+display_autogen/mocs_compilation.s: display_autogen/mocs_compilation.cpp.s
+.PHONY : display_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+display_autogen/mocs_compilation.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.s
+.PHONY : display_autogen/mocs_compilation.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+src/cpu_load_model.o: src/cpu_load_model.cpp.o
+.PHONY : src/cpu_load_model.o
+
+# target to build an object file
+src/cpu_load_model.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_load_model.cpp.o
+.PHONY : src/cpu_load_model.cpp.o
+
+src/cpu_load_model.i: src/cpu_load_model.cpp.i
+.PHONY : src/cpu_load_model.i
+
+# target to preprocess a source file
+src/cpu_load_model.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_load_model.cpp.i
+.PHONY : src/cpu_load_model.cpp.i
+
+src/cpu_load_model.s: src/cpu_load_model.cpp.s
+.PHONY : src/cpu_load_model.s
+
+# target to generate assembly for a file
+src/cpu_load_model.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_load_model.cpp.s
+.PHONY : src/cpu_load_model.cpp.s
+
+src/cpu_softirq_model.o: src/cpu_softirq_model.cpp.o
+.PHONY : src/cpu_softirq_model.o
+
+# target to build an object file
+src/cpu_softirq_model.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_softirq_model.cpp.o
+.PHONY : src/cpu_softirq_model.cpp.o
+
+src/cpu_softirq_model.i: src/cpu_softirq_model.cpp.i
+.PHONY : src/cpu_softirq_model.i
+
+# target to preprocess a source file
+src/cpu_softirq_model.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_softirq_model.cpp.i
+.PHONY : src/cpu_softirq_model.cpp.i
+
+src/cpu_softirq_model.s: src/cpu_softirq_model.cpp.s
+.PHONY : src/cpu_softirq_model.s
+
+# target to generate assembly for a file
+src/cpu_softirq_model.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_softirq_model.cpp.s
+.PHONY : src/cpu_softirq_model.cpp.s
+
+src/cpu_stat_model.o: src/cpu_stat_model.cpp.o
+.PHONY : src/cpu_stat_model.o
+
+# target to build an object file
+src/cpu_stat_model.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_stat_model.cpp.o
+.PHONY : src/cpu_stat_model.cpp.o
+
+src/cpu_stat_model.i: src/cpu_stat_model.cpp.i
+.PHONY : src/cpu_stat_model.i
+
+# target to preprocess a source file
+src/cpu_stat_model.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_stat_model.cpp.i
+.PHONY : src/cpu_stat_model.cpp.i
+
+src/cpu_stat_model.s: src/cpu_stat_model.cpp.s
+.PHONY : src/cpu_stat_model.s
+
+# target to generate assembly for a file
+src/cpu_stat_model.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/cpu_stat_model.cpp.s
+.PHONY : src/cpu_stat_model.cpp.s
+
+src/mem_model.o: src/mem_model.cpp.o
+.PHONY : src/mem_model.o
+
+# target to build an object file
+src/mem_model.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/mem_model.cpp.o
+.PHONY : src/mem_model.cpp.o
+
+src/mem_model.i: src/mem_model.cpp.i
+.PHONY : src/mem_model.i
+
+# target to preprocess a source file
+src/mem_model.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/mem_model.cpp.i
+.PHONY : src/mem_model.cpp.i
+
+src/mem_model.s: src/mem_model.cpp.s
+.PHONY : src/mem_model.s
+
+# target to generate assembly for a file
+src/mem_model.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/mem_model.cpp.s
+.PHONY : src/mem_model.cpp.s
+
+src/monitor_inter.o: src/monitor_inter.cpp.o
+.PHONY : src/monitor_inter.o
+
+# target to build an object file
+src/monitor_inter.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_inter.cpp.o
+.PHONY : src/monitor_inter.cpp.o
+
+src/monitor_inter.i: src/monitor_inter.cpp.i
+.PHONY : src/monitor_inter.i
+
+# target to preprocess a source file
+src/monitor_inter.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_inter.cpp.i
+.PHONY : src/monitor_inter.cpp.i
+
+src/monitor_inter.s: src/monitor_inter.cpp.s
+.PHONY : src/monitor_inter.s
+
+# target to generate assembly for a file
+src/monitor_inter.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_inter.cpp.s
+.PHONY : src/monitor_inter.cpp.s
+
+src/monitor_widget.o: src/monitor_widget.cpp.o
+.PHONY : src/monitor_widget.o
+
+# target to build an object file
+src/monitor_widget.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_widget.cpp.o
+.PHONY : src/monitor_widget.cpp.o
+
+src/monitor_widget.i: src/monitor_widget.cpp.i
+.PHONY : src/monitor_widget.i
+
+# target to preprocess a source file
+src/monitor_widget.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_widget.cpp.i
+.PHONY : src/monitor_widget.cpp.i
+
+src/monitor_widget.s: src/monitor_widget.cpp.s
+.PHONY : src/monitor_widget.s
+
+# target to generate assembly for a file
+src/monitor_widget.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_widget.cpp.s
+.PHONY : src/monitor_widget.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +344,32 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... display_autogen"
+	@echo "... display"
+	@echo "... display_autogen/mocs_compilation.o"
+	@echo "... display_autogen/mocs_compilation.i"
+	@echo "... display_autogen/mocs_compilation.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... src/cpu_load_model.o"
+	@echo "... src/cpu_load_model.i"
+	@echo "... src/cpu_load_model.s"
+	@echo "... src/cpu_softirq_model.o"
+	@echo "... src/cpu_softirq_model.i"
+	@echo "... src/cpu_softirq_model.s"
+	@echo "... src/cpu_stat_model.o"
+	@echo "... src/cpu_stat_model.i"
+	@echo "... src/cpu_stat_model.s"
+	@echo "... src/mem_model.o"
+	@echo "... src/mem_model.i"
+	@echo "... src/mem_model.s"
+	@echo "... src/monitor_inter.o"
+	@echo "... src/monitor_inter.i"
+	@echo "... src/monitor_inter.s"
+	@echo "... src/monitor_widget.o"
+	@echo "... src/monitor_widget.i"
+	@echo "... src/monitor_widget.s"
 .PHONY : help
 
 

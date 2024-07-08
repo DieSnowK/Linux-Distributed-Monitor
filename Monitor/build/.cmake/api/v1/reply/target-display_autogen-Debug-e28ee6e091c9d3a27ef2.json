@@ -1,0 +1,69 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"Display/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "client::@d3ab0359f2ee16939114"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "monitor_proto::@85092f65f94d7ce0f2a3"
+		}
+	],
+	"id" : "display_autogen::@c4cde679fe60da11761e",
+	"isGeneratorProvided" : true,
+	"name" : "display_autogen",
+	"paths" : 
+	{
+		"build" : "Display",
+		"source" : "Display"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Display/CMakeFiles/display_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Display/CMakeFiles/display_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

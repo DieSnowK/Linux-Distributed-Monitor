@@ -168,6 +168,32 @@ monitor_proto/fast:
 	$(MAKE) $(MAKESILENT) -f ProtoBuf/CMakeFiles/monitor_proto.dir/build.make ProtoBuf/CMakeFiles/monitor_proto.dir/build
 .PHONY : monitor_proto/fast
 
+#=============================================================================
+# Target rules for targets named display
+
+# Build rule for target.
+display: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 display
+.PHONY : display
+
+# fast build rule for target.
+display/fast:
+	$(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/build
+.PHONY : display/fast
+
+#=============================================================================
+# Target rules for targets named display_autogen
+
+# Build rule for target.
+display_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 display_autogen
+.PHONY : display_autogen
+
+# fast build rule for target.
+display_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display_autogen.dir/build.make Display/CMakeFiles/display_autogen.dir/build
+.PHONY : display_autogen/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -176,7 +202,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... display_autogen"
 	@echo "... client"
+	@echo "... display"
 	@echo "... monitor"
 	@echo "... monitor_proto"
 	@echo "... server"

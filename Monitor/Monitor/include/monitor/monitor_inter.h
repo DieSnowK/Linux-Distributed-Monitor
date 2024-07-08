@@ -10,7 +10,7 @@ namespace monitor
     public:
         MonitorInter() {}
         virtual ~MonitorInter() {}
-        virtual void UpdateOnce(monitor::MonitorInfo monitorInfo) = 0;
+        virtual void UpdateOnce(monitor::MonitorInfo *monitorInfo) = 0;
         virtual void Stop() = 0;
     };
 } // end of namespace monitor

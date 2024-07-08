@@ -14,5 +14,7 @@
 /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf/CMakeFiles/monitor_proto.dir
 /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf/CMakeFiles/edit_cache.dir
 /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf/CMakeFiles/rebuild_cache.dir
+/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/CMakeFiles/display.dir
 /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/CMakeFiles/edit_cache.dir
 /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/CMakeFiles/rebuild_cache.dir
+/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/CMakeFiles/display_autogen.dir

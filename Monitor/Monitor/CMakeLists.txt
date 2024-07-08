@@ -8,7 +8,7 @@ add_executable(monitor ${SRC})
 
 target_include_directories(monitor PUBLIC
     ${PROJECT_SOURCE_DIR}/Monitor/include/
-    ${PROJECT_SOURCE_DIR}/RPC
+    ${PROJECT_SOURCE_DIR}/RPC/Client
 )
 
 target_link_libraries(monitor PUBLIC

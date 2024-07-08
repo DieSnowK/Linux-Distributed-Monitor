@@ -4,12 +4,12 @@
 #include <unordered_map>
 #include <boost/chrono.hpp>
 #include "monitor/monitor_inter.h"
-#include "monitor_info.grpc.pb.h"
-#include "monitor_info.pb.h"
+#include "Monitor_Info.grpc.pb.h"
+#include "Monitor_Info.pb.h"
 
 namespace monitor
 {
-    class NetMonitor : public MonitorINter
+    class NetMonitor : public MonitorInter
     {
         struct NetInfo
         {
