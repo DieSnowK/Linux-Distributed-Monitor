@@ -18,7 +18,7 @@ namespace monitor
         int columnCount(const QModelIndex &parent = QModelIndex()) const override;
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
         QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
-        void UpdateMonitorInfo(const monitor::MonitorInfo &monito_info);
+        void UpdateMonitorInfo(const monitor::MonitorInfo &monitorInfo);
 
     signals:
         void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
