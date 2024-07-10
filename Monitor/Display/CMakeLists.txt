@@ -9,6 +9,7 @@ add_executable(display ${SRC})
 set_target_properties(display PROPERTIES AUTOMOC TRUE)
 
 target_include_directories(display PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/RPC
 )
 

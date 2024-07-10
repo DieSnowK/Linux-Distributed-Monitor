@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DCARES_STATICLIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/display_autogen/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+CXX_INCLUDES = -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/display_autogen/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 
 CXX_FLAGS = -g -fPIC
 

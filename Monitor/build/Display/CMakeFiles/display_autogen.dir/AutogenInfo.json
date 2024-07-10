@@ -66,6 +66,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/include",
 		"/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC",
 		"/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf",
 		"/usr/include/x86_64-linux-gnu/qt5",
