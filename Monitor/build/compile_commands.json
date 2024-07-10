@@ -148,5 +148,10 @@
   "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display",
   "command": "/usr/bin/c++ -DCARES_STATICLIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/display_autogen/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -fPIC -o CMakeFiles/display.dir/src/monitor_widget.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/monitor_widget.cpp",
   "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/monitor_widget.cpp"
+},
+{
+  "directory": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/Display/display_autogen/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/include -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC -I/home/snowk/repository/Linux-Distributed-Monitor/Monitor/build/ProtoBuf -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -fPIC -o CMakeFiles/display.dir/src/net_model.cpp.o -c /home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/net_model.cpp",
+  "file": "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/net_model.cpp"
 }
 ]

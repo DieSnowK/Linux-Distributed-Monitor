@@ -336,6 +336,30 @@ src/monitor_widget.cpp.s:
 	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/monitor_widget.cpp.s
 .PHONY : src/monitor_widget.cpp.s
 
+src/net_model.o: src/net_model.cpp.o
+.PHONY : src/net_model.o
+
+# target to build an object file
+src/net_model.cpp.o:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/net_model.cpp.o
+.PHONY : src/net_model.cpp.o
+
+src/net_model.i: src/net_model.cpp.i
+.PHONY : src/net_model.i
+
+# target to preprocess a source file
+src/net_model.cpp.i:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/net_model.cpp.i
+.PHONY : src/net_model.cpp.i
+
+src/net_model.s: src/net_model.cpp.s
+.PHONY : src/net_model.s
+
+# target to generate assembly for a file
+src/net_model.cpp.s:
+	cd /home/snowk/repository/Linux-Distributed-Monitor/Monitor/build && $(MAKE) $(MAKESILENT) -f Display/CMakeFiles/display.dir/build.make Display/CMakeFiles/display.dir/src/net_model.cpp.s
+.PHONY : src/net_model.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -370,6 +394,9 @@ help:
 	@echo "... src/monitor_widget.o"
 	@echo "... src/monitor_widget.i"
 	@echo "... src/monitor_widget.s"
+	@echo "... src/net_model.o"
+	@echo "... src/net_model.i"
+	@echo "... src/net_model.s"
 .PHONY : help
 
 

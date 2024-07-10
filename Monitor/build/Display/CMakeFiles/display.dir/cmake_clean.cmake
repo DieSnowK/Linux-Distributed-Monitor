@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/display.dir/src/monitor_inter.cpp.o.d"
   "CMakeFiles/display.dir/src/monitor_widget.cpp.o"
   "CMakeFiles/display.dir/src/monitor_widget.cpp.o.d"
+  "CMakeFiles/display.dir/src/net_model.cpp.o"
+  "CMakeFiles/display.dir/src/net_model.cpp.o.d"
   "display"
   "display.pdb"
 )

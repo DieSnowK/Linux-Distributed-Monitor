@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/mem_model.cpp" "Display/CMakeFiles/display.dir/src/mem_model.cpp.o" "gcc" "Display/CMakeFiles/display.dir/src/mem_model.cpp.o.d"
   "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/monitor_inter.cpp" "Display/CMakeFiles/display.dir/src/monitor_inter.cpp.o" "gcc" "Display/CMakeFiles/display.dir/src/monitor_inter.cpp.o.d"
   "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/monitor_widget.cpp" "Display/CMakeFiles/display.dir/src/monitor_widget.cpp.o" "gcc" "Display/CMakeFiles/display.dir/src/monitor_widget.cpp.o.d"
+  "/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/net_model.cpp" "Display/CMakeFiles/display.dir/src/net_model.cpp.o" "gcc" "Display/CMakeFiles/display.dir/src/net_model.cpp.o.d"
   )
 
 # Targets to which this target links.

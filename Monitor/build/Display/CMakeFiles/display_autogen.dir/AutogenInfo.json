@@ -140,6 +140,11 @@
 			"/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/monitor_widget.cpp",
 			"Mu",
 			null
+		],
+		[
+			"/home/snowk/repository/Linux-Distributed-Monitor/Monitor/Display/src/net_model.cpp",
+			"Mu",
+			null
 		]
 	],
 	"VERBOSITY" : 0
