@@ -25,7 +25,7 @@ namespace monitor
                          const QVector<int> &roles);
 
     private:
-        std::vector<QVariant> InsertOneMemInfo(const monitor::CpuStat &mem_info);
+        std::vector<QVariant> InsertOneMemInfo(const monitor::MemInfo &mem_info);
         std::vector<std::vector<QVariant>> _monitorData;
         QStringList _header;
 

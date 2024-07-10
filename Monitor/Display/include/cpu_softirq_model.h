@@ -7,13 +7,13 @@
 
 namespace monitor
 {
-    class MonitorBaseModel : public MonitorInterModel
+    class SoftIrqModel : public MonitorInterModel
     {
         Q_OBJECT
 
     public:
-        explicit MonitorBaseModel(QObject *parent = nullptr);
-        virtual ~MonitorBaseModel() {}
+        explicit SoftIrqModel(QObject *parent = nullptr);
+        virtual ~SoftIrqModel() {}
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const override;
         int columnCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -30,7 +30,7 @@ namespace monitor
         std::vector<std::vector<QVariant>> _monitorData;
         QStringList _header;
 
-        enum SoftIrqInfo
+        enum SoftIrq
         {
             CPU_NAME = 0,
             HI,

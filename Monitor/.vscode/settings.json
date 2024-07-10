@@ -67,6 +67,8 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "qabstracttablemodel": "cpp",
-        "qobject": "cpp"
+        "qobject": "cpp",
+        "qtwidgets": "cpp",
+        "qstandarditemmodel": "cpp"
     }
 }
