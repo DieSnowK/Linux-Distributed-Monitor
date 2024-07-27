@@ -35,13 +35,13 @@ namespace monitor
         void ClickNetButton();
 
     private:
-        QTableView *_monitor_view = nullptr;
+        QTableView *_softirq_view = nullptr;
         QTableView *_cpu_load_monitor_view = nullptr;
         QTableView *_cpu_stat_monitor_view = nullptr;
         QTableView *_mem_monitor_view = nullptr;
         QTableView *_net_monitor_view = nullptr;
 
-        SoftIrqModel *_softirq_monitor_model = nullptr;
+        SoftIrqModel *_softirq_model = nullptr;
         CpuLoadModel *_cpu_load_model = nullptr;
         CpuStatModel *_cpu_stat_model = nullptr;
         MemModel *_mem_model = nullptr;
