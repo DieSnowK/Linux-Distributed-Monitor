@@ -54,7 +54,7 @@ namespace monitor
         return MonitorInterModel::headerData(section, orientation, role);
     }
 
-    void UpdateMonitorInfo(const monitor::MonitorInfo &monitorInfo)
+    void SoftIrqModel::UpdateMonitorInfo(const monitor::MonitorInfo &monitorInfo)
     {
         beginResetModel();
         _monitorData.clear();
@@ -67,7 +67,7 @@ namespace monitor
         endResetModel();
     }
 
-    std::vector<QVariant> InsertOneSoftIrq(const monitor::SoftIrq &soft_irq)
+    std::vector<QVariant> SoftIrqModel::InsertOneSoftIrq(const monitor::SoftIrq &soft_irq)
     {
         std::vector<QVariant> soft_irq_list;
         for (int i = SoftIrq::CPU_NAME; i < SoftIrq::COLUMN_MAX; i++)

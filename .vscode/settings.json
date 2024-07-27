@@ -69,6 +69,7 @@
         "qabstracttablemodel": "cpp",
         "qobject": "cpp",
         "qtwidgets": "cpp",
-        "qstandarditemmodel": "cpp"
+        "qstandarditemmodel": "cpp",
+        "future": "cpp"
     }
 }
