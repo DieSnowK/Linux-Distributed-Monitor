@@ -1,10 +1,19 @@
-cmake_minimum_required(VERSION 3.10.2)
-project(Linux_Distributed_Monitor)
+# Monitor
 
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/build)
-set(CMAKE_CXX_STANDARD 17)
+file(GLOB_RECURSE SRC ${CMAKE_CURRENT_SOURCE_DIR}/*cpp)
 
-add_subdirectory(RPC)
-add_subdirectory(Monitor)
-add_subdirectory(ProtoBuf)
-add_subdirectory(Display)
+# TODO set(EXECUTABLE_OUTPUT_PATH )
+
+add_executable(monitor ${SRC})
+
+target_include_directories(monitor PUBLIC
+    ${PROJECT_SOURCE_DIR}/Monitor/include/
+    ${PROJECT_SOURCE_DIR}/RPC/Client
+)
+
+target_link_libraries(monitor PUBLIC
+    monitor_proto
+    client
+    boost_system
+    boost_chrono    
+)
