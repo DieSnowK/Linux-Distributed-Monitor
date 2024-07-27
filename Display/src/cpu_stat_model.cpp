@@ -63,7 +63,7 @@ namespace monitor
     std::vector<QVariant> CpuStatModel::InsertOneCpuStat(const monitor::CpuStat &cpu_stat)
     {
         std::vector<QVariant> cpu_stat_list;
-        for (int i = CpuStat::CPU_NAME; i < COLUMN_MAX; i++)
+        for (int i = CpuStat::CPU_NAME; i < CpuStat::COLUMN_MAX; i++)
         {
             switch (i)
             {
