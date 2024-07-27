@@ -9,7 +9,7 @@ namespace monitor
 {
     class MemModel : public MonitorInterModel
     {
-        Q_OBJECT
+        // Q_OBJECT
     public:
         explicit MemModel(QObject *parent = nullptr);
         virtual ~MemModel() {}

@@ -28,7 +28,7 @@ namespace monitor
         return COLUMN_MAX;
     }
 
-    QVariant SoftIrqModel::data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant SoftIrqModel::data(const QModelIndex &index, int role) const
     {
         if (index.column() < 0 || index.column() >= COLUMN_MAX)
         {
@@ -59,7 +59,7 @@ namespace monitor
         beginResetModel();
         _monitorData.clear();
 
-        for (int i = 0; i < monitorInfo.sort_irq_size(); i++)
+        for (int i = 0; i < monitorInfo.soft_irq_size(); i++)
         {
             _monitorData.push_back(InsertOneSoftIrq(monitorInfo.soft_irq(i)));
         }

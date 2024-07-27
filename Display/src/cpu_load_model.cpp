@@ -2,7 +2,7 @@
 
 namespace monitor
 {
-    CpuLoadModel::CpuLoadModel(QObject* parent = nullptr)
+    CpuLoadModel::CpuLoadModel(QObject* parent)
         : MonitorInterModel(parent)
     {
         _header << tr("load_1"); // Can be translated
@@ -20,7 +20,7 @@ namespace monitor
         return COLUMN_MAX;
     }
 
-    QVariant CpuLoadModel::data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant CpuLoadModel::data(const QModelIndex &index, int role) const
     {
         if (index.column() < 0 || index.column() >= COLUMN_MAX)
         {
@@ -51,7 +51,7 @@ namespace monitor
         beginResetModel();
         _monitorData.clear();
 
-        _monitorData.push_back(InsertOneCpuLoad(monitorInfo.CpuLoad()));
+        _monitorData.push_back(InsertOneCpuLoad(monitorInfo.cpu_load()));
 
         endResetModel();
     }
@@ -59,18 +59,18 @@ namespace monitor
     std::vector<QVariant> CpuLoadModel::InsertOneCpuLoad(const monitor::CpuLoad &cpu_load)
     {
         std::vector<QVariant> cpu_load_list;
-        for (int i = CPULoad::CPU_AVG_1; i < CPULoad::COLUMN_MAX; i++)
+        for (int i = CpuLoad::CPU_AVG_1; i < CpuLoad::COLUMN_MAX; i++)
         {
             switch(i)
             {
             case CpuLoad::CPU_AVG_1:
-                cpu_load_list.push_back(QVariant(cpu_load.load_avg_1_()));
+                cpu_load_list.push_back(QVariant(cpu_load.load_avg_1()));
                 break;
             case CpuLoad::CPU_AVG_3:
-                cpu_load_list.push_back(QVariant(cpu_load.load_avg_3_()));
+                cpu_load_list.push_back(QVariant(cpu_load.load_avg_3()));
                 break;
             case CpuLoad::CPU_AVG_15:
-                cpu_load_list.push_back(QVariant(cpu_load.load_avg_15_()));
+                cpu_load_list.push_back(QVariant(cpu_load.load_avg_15()));
                 break;
             default:
                 break;

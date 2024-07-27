@@ -1,7 +1,7 @@
 # ProtoBuf
 
-# 自动查找并加载外部软件包或库
-# CONFIG 使用配置模式
+# Automatically find and load external packages or libraries
+# CONFIG Use the configuration mode
 find_package(protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 find_package(c-ares CONFIG)

@@ -2,8 +2,6 @@
 
 file(GLOB_RECURSE SRC ${CMAKE_CURRENT_SOURCE_DIR}/*cpp)
 
-# TODO set(EXECUTABLE_OUTPUT_PATH )
-
 add_executable(monitor ${SRC})
 
 target_include_directories(monitor PUBLIC

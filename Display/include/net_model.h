@@ -9,7 +9,7 @@ namespace monitor
 {
     class NetModel : public MonitorInterModel
     {
-        Q_OBJECT
+        // Q_OBJECT
     public:
         explicit NetModel(QObject *parent = nullptr);
         virtual ~NetModel() {}

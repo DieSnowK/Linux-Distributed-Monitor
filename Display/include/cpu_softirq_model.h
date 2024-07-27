@@ -9,8 +9,7 @@ namespace monitor
 {
     class SoftIrqModel : public MonitorInterModel
     {
-        Q_OBJECT
-
+        // Q_OBJECT
     public:
         explicit SoftIrqModel(QObject *parent = nullptr);
         virtual ~SoftIrqModel() {}

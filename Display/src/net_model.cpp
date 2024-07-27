@@ -22,7 +22,7 @@ namespace monitor
         return COLUMN_MAX;
     }
 
-    QVariant NetModel::data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant NetModel::data(const QModelIndex &index, int role) const
     {
         if (index.column() < 0 || index.column() >= COLUMN_MAX)
         {
@@ -64,23 +64,23 @@ namespace monitor
     std::vector<QVariant> NetModel::InsertOneNetInfo(const monitor::NetInfo &net_info)
     {
         std::vector<QVariant> net_info_list;
-        for (int i = NetModelInfo::NAME; i < COLUMN_MAX; i++)
+        for (int i = NetInfo::NAME; i < COLUMN_MAX; i++)
         {
             switch (i)
             {
-            case NetModelInfo::NAME:
+            case NetInfo::NAME:
                 net_info_list.push_back(QVariant(QString::fromStdString(net_info.name())));
                 break;
-            case NetModelInfo::SEND_RATE:
+            case NetInfo::SEND_RATE:
                 net_info_list.push_back(QVariant(net_info.send_rate()));
                 break;
-            case NetModelInfo::RCV_RATE:
+            case NetInfo::RCV_RATE:
                 net_info_list.push_back(QVariant(net_info.rcv_rate()));
                 break;
-            case NetModelInfo::SEND_PACKETS_RATE:
+            case NetInfo::SEND_PACKETS_RATE:
                 net_info_list.push_back(QVariant(net_info.send_packets_rate()));
                 break;
-            case NetModelInfo::RCV_PACKETS_RATE:
+            case NetInfo::RCV_PACKETS_RATE:
                 net_info_list.push_back(QVariant(net_info.rcv_packets_rate()));
                 break;
             default:

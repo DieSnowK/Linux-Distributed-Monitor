@@ -3,7 +3,7 @@
 namespace monitor
 {
     MemModel::MemModel(QObject* parent)
-        :MonitorInterModel(parent)
+        : MonitorInterModel(parent)
     {
         _header << tr("used_percent");
         _header << tr("total");
@@ -37,7 +37,7 @@ namespace monitor
         return COLUMN_MAX;
     }
 
-    QVariant MemModel::data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant MemModel::data(const QModelIndex &index, int role) const
     {
         if (index.column() < 0 || index.column() >= COLUMN_MAX)
         {
@@ -73,7 +73,7 @@ namespace monitor
         endResetModel();
     }
 
-    std::vector<QVariant> InsertOneMemInfo(const monitor::MemInfo &mem_info)
+    std::vector<QVariant> MemModel::InsertOneMemInfo(const monitor::MemInfo &mem_info)
     {
         std::vector<QVariant> mem_info_list;
         for (int i = MemInfo::USED_PERCENT; i < MemInfo::COLUMN_MAX; i++)
@@ -126,13 +126,13 @@ namespace monitor
                 mem_info_list.push_back(QVariant(mem_info.mapped()));
                 break;
             case MemInfo::KRECLAIMABLE:
-                mem_info_list.push_back(QVariant(mem_info.kreclaimable()));
+                mem_info_list.push_back(QVariant(mem_info.k_reclaimable()));
                 break;
             case MemInfo::SRECLAIMABLE:
-                mem_info_list.push_back(QVariant(mem_info.sreclaimable()));
+                mem_info_list.push_back(QVariant(mem_info.s_reclaimable()));
                 break;
             case MemInfo::SUNRECLAIM:
-                mem_info_list.push_back(QVariant(mem_info.sunreclaim()));
+                mem_info_list.push_back(QVariant(mem_info.s_unreclaim()));
                 break;
             default:
                 break;

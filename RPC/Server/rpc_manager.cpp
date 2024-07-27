@@ -14,7 +14,7 @@ namespace monitor
         _monitorInfo = *request;
 
         // TODO Think Why?
-        std::cout << "Success" << request->sort_irq_size() << std::endl;
+        std::cout << "Success" << request->soft_irq_size() << std::endl;
         
         return ::grpc::Status::OK;
     }

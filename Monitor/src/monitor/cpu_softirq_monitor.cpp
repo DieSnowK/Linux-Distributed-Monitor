@@ -40,7 +40,7 @@ namespace monitor
                 SoftIrq &old = iter->second;
                 double period = Utils::SteadyTimeSecond(info.timePoint, old.timePoint);
 
-                auto one_softirq_msg = monitorInfo->add_sort_irq();
+                auto one_softirq_msg = monitorInfo->add_soft_irq();
                 one_softirq_msg->set_cpu(info.cpu_name);
                 one_softirq_msg->set_hi((info.hi - old.hi) / period);
                 one_softirq_msg->set_timer((info.timer - old.timer) / period);

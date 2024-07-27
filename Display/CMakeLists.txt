@@ -2,8 +2,8 @@
 
 find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
 
-file(GLOB_RECURSE SRC ${CMAKE_CURRENT_SOURCE_DIR}/*cpp)
-# TODO set(EXECUTABLE_OUTPUT_PATH )
+# Note that Qt needs to be compiled together with the header file
+file(GLOB_RECURSE SRC ${CMAKE_CURRENT_SOURCE_DIR}/*cpp ${CMAKE_CURRENT_SOURCE_DIR}/*h)
 
 add_executable(display ${SRC})
 set_target_properties(display PROPERTIES AUTOMOC TRUE)

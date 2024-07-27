@@ -9,7 +9,7 @@ namespace monitor
 {
     class CpuLoadModel : public MonitorInterModel
     {
-        Q_OBJECT
+        // Q_OBJECT
     public:
         explicit CpuLoadModel(QObject *parent = nullptr);
         virtual ~CpuLoadModel() {}

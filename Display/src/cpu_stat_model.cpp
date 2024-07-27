@@ -3,7 +3,7 @@
 namespace monitor
 {
     CpuStatModel::CpuStatModel(QObject* parent)
-        :MonitorInterModel(parent)
+        : MonitorInterModel(parent)
     {
         _header << tr("name");
         _header << tr("cpu_percent");
@@ -21,7 +21,7 @@ namespace monitor
         return COLUMN_MAX;
     }
 
-    QVariant CpuStatModel::data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant CpuStatModel::data(const QModelIndex &index, int role) const
     {
         if (index.column() < 0 || index.column() >= COLUMN_MAX)
         {
@@ -77,7 +77,7 @@ namespace monitor
                 cpu_stat_list.push_back(QVariant(cpu_stat.usr_percent()));
                 break;
             case CpuStat::CPU_SYSTEM_PERCENT:
-                cpu_stat_list.push_back(QVariant(cpu_stat.system_percent()));
+                cpu_stat_list.push_back(QVariant(cpu_stat.sys_percent()));
                 break;
             default:
                 break;

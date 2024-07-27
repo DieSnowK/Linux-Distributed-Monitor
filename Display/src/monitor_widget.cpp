@@ -3,7 +3,7 @@
 
 namespace monitor
 {
-    MonitorWidget::MonitorWidget(QWidget *parent) {} // TODO
+    MonitorWidget::MonitorWidget(QWidget *parent) {}
 
     QWidget* MonitorWidget::ShowAllMonitorWidget(const std::string &name)
     {
@@ -126,15 +126,6 @@ namespace monitor
         return widget;
     }
 
-    void MonitorWidget::UpdateData(const monitor::MonitorInfo &monitorInfo)
-    {
-        _softirq_model->UpdateMonitorInfo(monitorInfo);
-        _cpu_load_model->UpdateMonitorInfo(monitorInfo);
-        _cpu_stat_model->UpdateMonitorInfo(monitorInfo);
-        _mem_model->UpdateMonitorInfo(monitorInfo);
-        _net_model->UpdateMonitorInfo(monitorInfo);
-    }
-
     QWidget *MonitorWidget::InitButtonMenu(const std::string &name)
     {
         QPushButton *cpu_button = new QPushButton(QString::fromStdString(name) + "_cpu", this);
@@ -167,6 +158,15 @@ namespace monitor
         connect(net_button, &QPushButton::clicked, this, &MonitorWidget::ClickNetButton);
 
         return widget;
+    }
+
+    void MonitorWidget::UpdateData(const monitor::MonitorInfo &monitorInfo)
+    {
+        _softirq_model->UpdateMonitorInfo(monitorInfo);
+        _cpu_load_model->UpdateMonitorInfo(monitorInfo);
+        _cpu_stat_model->UpdateMonitorInfo(monitorInfo);
+        _mem_model->UpdateMonitorInfo(monitorInfo);
+        _net_model->UpdateMonitorInfo(monitorInfo);
     }
 
     void MonitorWidget::ClickCpuButton() 

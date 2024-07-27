@@ -14,17 +14,17 @@ int main(int argc, char* argv[])
     std::string name = monitor_info.name();
 
     QWidget *widget = monitor_widget.ShowAllMonitorWidget(name);
-    widget.show();
+    widget->show();
 
     std::unique_ptr<std::thread> thread;
     thread = std::make_unique<std::thread>([&]() 
     {
         while(true)
         {
-            monitor_info.clear();
+            monitor_info.Clear();
             rpc_client.GetMonitorInfo(&monitor_info);
 
-            monitor_widget.UpdateData();
+            monitor_widget.UpdateData(monitor_info);
             std::this_thread::sleep_for(std::chrono::seconds(2));
         }
     });

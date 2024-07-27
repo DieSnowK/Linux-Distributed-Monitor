@@ -9,7 +9,7 @@ namespace monitor
 {
     class CpuStatModel : public MonitorInterModel
     {
-        Q_OBJECT
+        // Q_OBJECT
     public:
         explicit CpuStatModel(QObject *parent = nullptr);
         virtual ~CpuStatModel() {}

@@ -4,7 +4,7 @@
 
 namespace monitor
 {
-    QVariant MonitorInterModel::data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant MonitorInterModel::data(const QModelIndex &index, int role) const
     {
         if(role == Qt::TextAlignmentRole)
         {

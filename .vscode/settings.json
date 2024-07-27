@@ -71,6 +71,7 @@
         "qtwidgets": "cpp",
         "qstandarditemmodel": "cpp",
         "future": "cpp",
-        "qapplication": "cpp"
+        "qapplication": "cpp",
+        "*.inc": "cpp"
     }
 }
