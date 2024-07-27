@@ -135,6 +135,40 @@ namespace monitor
         _net_model->UpdateMonitorInfo(monitorInfo);
     }
 
+    QWidget *MonitorWidget::InitButtonMenu(const std::string &name)
+    {
+        QPushButton *cpu_button = new QPushButton(QString::fromStdString(name) + "_cpu", this);
+        QPushButton *soft_irq_button = new QPushButton(QString::fromStdString(name) + "_soft_irq", this);
+        QPushButton *mem_button = new QPushButton(QString::fromStdString(name) + "_mem", this);
+        QPushButton *net_button = new QPushButton(QString::fromStdString(name) + "_net", this);
+        QFont *font = new QFont("Microsoft YaHei", 15, 40);
+        cpu_button->setFont(*font);
+        soft_irq_button->setFont(*font);
+        mem_button->setFont(*font);
+        net_button->setFont(*font);
+
+        QHBoxLayout *layout = new QHBoxLayout();
+        layout->addWidget(cpu_button);
+        layout->addWidget(soft_irq_button);
+        layout->addWidget(mem_button);
+        layout->addWidget(net_button);
+
+        QWidget *widget = new QWidget();
+        widget->setLayout(layout);
+
+        // connect(cpu_button, SIGNAL(clicked()), this, SLOT(ClickCpuButton()));
+        // connect(soft_irq_button, SIGNAL(clicked()), this, SLOT(ClickSoftIrqButton()));
+        // connect(mem_button, SIGNAL(clicked()), this, SLOT(ClickMemButton()));
+        // connect(net_button, SIGNAL(clicked()), this, SLOT(ClickNetButton()));
+
+        connect(cpu_button, &QPushButton::clicked, this, &MonitorWidget::ClickCpuButton);
+        connect(soft_irq_button, &QPushButton::clicked, this, &MonitorWidget::ClickSoftIrqButton);
+        connect(mem_button, &QPushButton::clicked, this, &MonitorWidget::ClickMemButton);
+        connect(net_button, &QPushButton::clicked, this, &MonitorWidget::ClickNetButton);
+
+        return widget;
+    }
+
     void MonitorWidget::ClickCpuButton() 
     {
         _stack_menu->setCurrentIndex(0);
