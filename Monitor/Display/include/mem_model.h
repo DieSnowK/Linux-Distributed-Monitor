@@ -12,7 +12,7 @@ namespace monitor
         Q_OBJECT
     public:
         explicit MemModel(QObject *parent = nullptr);
-        Virtual ~MemModel() {}
+        virtual ~MemModel() {}
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const override;
         int columnCount(const QModelIndex &parent = QModelIndex()) const override;

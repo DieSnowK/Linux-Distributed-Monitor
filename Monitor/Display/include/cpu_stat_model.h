@@ -11,7 +11,7 @@ namespace monitor
     {
         Q_OBJECT
     public:
-        explicit CPuStatModel(QObject *parent = nullptr);
+        explicit CpuStatModel(QObject *parent = nullptr);
         virtual ~CpuStatModel() {}
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const override;
