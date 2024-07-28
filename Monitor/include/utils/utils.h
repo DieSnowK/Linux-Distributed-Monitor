@@ -22,9 +22,14 @@ namespace monitor
         class ReadFile
         {
         public:
-            ReadFile(const std::string &name)
+            explicit ReadFile(const std::string &name)
                 : _ifs(name)
-            {}
+            {
+                if (!_ifs.is_open())
+                {
+                    std::cerr << "Failed to open file " << name << std::endl;
+                }
+            }
 
             ~ReadFile()
             {
@@ -36,7 +41,7 @@ namespace monitor
                                                           const int lineCount);
 
         private:
-            std::fstream _ifs;
+            std::ifstream _ifs;
         };
     };
 } // end of namespace monitor

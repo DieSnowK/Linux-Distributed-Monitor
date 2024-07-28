@@ -7,7 +7,9 @@ namespace monitor
         std::string line;
         
         std::getline(_ifs, line);
-        if(_ifs.eof() || line.empty())
+        // std::cerr << "DEBUG: " << line << std::endl;
+
+        if (_ifs.eof() || line.empty())
         {
             return false;
         }

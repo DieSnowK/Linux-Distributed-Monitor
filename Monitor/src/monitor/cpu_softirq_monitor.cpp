@@ -5,7 +5,7 @@ namespace monitor
 {
     void CpuSoftIrqMonitor::UpdateOnce(monitor::MonitorInfo *monitorInfo)
     {
-        Utils::ReadFile softirqs_file("/proc/softirqs");
+        Utils::ReadFile softirqs_file(std::string("/proc/softirqs"));
         std::vector<std::string> one_softirq;
         std::vector<std::vector<std::string>> softirq;
 
