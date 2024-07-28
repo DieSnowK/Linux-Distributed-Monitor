@@ -15,7 +15,6 @@ namespace monitor
             if(name.find(":") == name.size() - 1 && net_datas.size() >= 10)
             {
                 NetInfo net_info;
-                
                 name.pop_back();
                 net_info.name = name;
                 net_info.timePoint = boost::chrono::steady_clock::now();
@@ -45,6 +44,8 @@ namespace monitor
                     one_net_msg->set_rcv_packets_rate(
                         (net_info.rcv_packets - old.rcv_packets) / period);
                 }
+
+                _net_info_map[name] = net_info;
             }
 
             net_datas.clear();

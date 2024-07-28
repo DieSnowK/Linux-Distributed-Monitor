@@ -5,9 +5,9 @@ namespace monitor
     CpuLoadModel::CpuLoadModel(QObject* parent)
         : MonitorInterModel(parent)
     {
-        _header << tr("load_1"); // Can be translated
-        _header << tr("load_3");
-        _header << tr("load_15");
+        _header << tr("Load_1"); // Can be translated
+        _header << tr("Load_3");
+        _header << tr("Load_15");
     }
 
     int CpuLoadModel::rowCount(const QModelIndex& parent) const

@@ -5,10 +5,10 @@ namespace monitor
     CpuStatModel::CpuStatModel(QObject* parent)
         : MonitorInterModel(parent)
     {
-        _header << tr("name");
-        _header << tr("cpu_percent");
-        _header << tr("user");
-        _header << tr("system");
+        _header << tr("Name");
+        _header << tr("Cpu_Percent");
+        _header << tr("User");
+        _header << tr("System");
     }
 
     int CpuStatModel::rowCount(const QModelIndex &parent) const

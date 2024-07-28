@@ -37,8 +37,8 @@ namespace monitor
         _cpu_load_monitor_view->show();
 
         QLabel* cpu_stat_label = new QLabel(this);
-        cpu_load_label->setText(tr("Monitor CpuStat:"));
-        cpu_load_label->setFont(QFont("Microsoft YaHei", 10, 40));
+        cpu_stat_label->setText(tr("Monitor CpuStat:"));
+        cpu_stat_label->setFont(QFont("Microsoft YaHei", 10, 40));
 
         _cpu_stat_monitor_view = new QTableView;
         _cpu_stat_model = new CpuStatModel;
@@ -62,7 +62,7 @@ namespace monitor
         QWidget* widget = new QWidget();
 
         QLabel* monitor_label = new QLabel(this);
-        monitor_label->setText(tr("Monitor softirq:"));
+        monitor_label->setText(tr("Monitor SoftIrq:"));
         monitor_label->setFont(QFont("Microsoft YaHei", 10, 40));
 
         _softirq_view = new QTableView;
@@ -87,7 +87,7 @@ namespace monitor
         QWidget* widget = new QWidget();
 
         QLabel* mem_label = new QLabel(this);
-        mem_label->setText(tr("Monitor mem:"));
+        mem_label->setText(tr("Monitor Mem:"));
         mem_label->setFont(QFont("Microsoft YaHei", 10, 40));
 
         _mem_monitor_view = new QTableView;
@@ -109,7 +109,7 @@ namespace monitor
         QWidget *widget = new QWidget();
 
         QLabel *net_label = new QLabel(this);
-        net_label->setText(tr("Monitor net:"));
+        net_label->setText(tr("Monitor Net:"));
         net_label->setFont(QFont("Microsoft YaHei", 10, 40));
 
         _net_monitor_view = new QTableView;
@@ -128,10 +128,10 @@ namespace monitor
 
     QWidget *MonitorWidget::InitButtonMenu(const std::string &name)
     {
-        QPushButton *cpu_button = new QPushButton(QString::fromStdString(name) + "_cpu", this);
-        QPushButton *soft_irq_button = new QPushButton(QString::fromStdString(name) + "_soft_irq", this);
-        QPushButton *mem_button = new QPushButton(QString::fromStdString(name) + "_mem", this);
-        QPushButton *net_button = new QPushButton(QString::fromStdString(name) + "_net", this);
+        QPushButton *cpu_button = new QPushButton(QString::fromStdString(name) + "_CPU", this);
+        QPushButton *soft_irq_button = new QPushButton(QString::fromStdString(name) + "_SoftIrq", this);
+        QPushButton *mem_button = new QPushButton(QString::fromStdString(name) + "_Mem", this);
+        QPushButton *net_button = new QPushButton(QString::fromStdString(name) + "_Net", this);
         QFont *font = new QFont("Microsoft YaHei", 15, 40);
         cpu_button->setFont(*font);
         soft_irq_button->setFont(*font);
@@ -146,11 +146,6 @@ namespace monitor
 
         QWidget *widget = new QWidget();
         widget->setLayout(layout);
-
-        // connect(cpu_button, SIGNAL(clicked()), this, SLOT(ClickCpuButton()));
-        // connect(soft_irq_button, SIGNAL(clicked()), this, SLOT(ClickSoftIrqButton()));
-        // connect(mem_button, SIGNAL(clicked()), this, SLOT(ClickMemButton()));
-        // connect(net_button, SIGNAL(clicked()), this, SLOT(ClickNetButton()));
 
         connect(cpu_button, &QPushButton::clicked, this, &MonitorWidget::ClickCpuButton);
         connect(soft_irq_button, &QPushButton::clicked, this, &MonitorWidget::ClickSoftIrqButton);

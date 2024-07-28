@@ -5,11 +5,11 @@ namespace monitor
     NetModel::NetModel(QObject *parent) 
         : MonitorInterModel(parent)
     {
-        _header << tr("name");
-        _header << tr("send_rate");
-        _header << tr("rcv_rate");
-        _header << tr("send_packets_rate");
-        _header << tr("rcv_packets_rate");
+        _header << tr("Name");
+        _header << tr("Send_Rate");
+        _header << tr("Rcv_Rate");
+        _header << tr("Send_Packets_Rate");
+        _header << tr("Rcv_Packets_Rate");
     }
 
     int NetModel::rowCount(const QModelIndex &parent) const
@@ -53,8 +53,12 @@ namespace monitor
         beginResetModel();
         _monitorData.clear();
 
+        std::cout << monitorInfo.net_info_size() << std::endl;
+
+        // TODO 问题所在：net_info_size() 一直为0
         for (int i = 0; i < monitorInfo.net_info_size(); i++)
         {
+            std::cout << "for (int i = 0; i < monitorInfo.net_info_size(); i++)" << std::endl;
             _monitorData.push_back(InsertOneNetInfo(monitorInfo.net_info(i)));
         }
 

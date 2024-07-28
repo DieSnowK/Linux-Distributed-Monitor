@@ -24,6 +24,8 @@ int main(int argc, char* argv[])
             monitor_info.Clear();
             rpc_client.GetMonitorInfo(&monitor_info);
 
+            std::cout << "monitor_widget.UpdateData(monitor_info);" << std::endl;
+
             monitor_widget.UpdateData(monitor_info);
             std::this_thread::sleep_for(std::chrono::seconds(2));
         }
