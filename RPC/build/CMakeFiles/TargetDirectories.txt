@@ -1,8 +1,0 @@
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/CMakeFiles/edit_cache.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/CMakeFiles/rebuild_cache.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/Client/CMakeFiles/client.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/Client/CMakeFiles/edit_cache.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/Client/CMakeFiles/rebuild_cache.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/Server/CMakeFiles/server.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/Server/CMakeFiles/edit_cache.dir
-/home/snowk/repository/Linux-Distributed-Monitor/Monitor/RPC/build/Server/CMakeFiles/rebuild_cache.dir

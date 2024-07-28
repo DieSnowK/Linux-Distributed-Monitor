@@ -15,8 +15,7 @@ namespace monitor
             one_softirq.clear();
         }
 
-        // maybe missing a cpu
-        for (int i = 0; i < softirq[0].size() - 1; ++i) // TODO why - 1? experenice myself later
+        for (int i = 0; i < softirq[0].size() - 1; ++i)
         {
             std::string name = softirq[0][i];
             SoftIrq info;

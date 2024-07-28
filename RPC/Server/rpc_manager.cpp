@@ -1,6 +1,7 @@
 #include <iostream>
+#include <grpc/grpc.h>
+#include <grpcpp/server_builder.h>
 #include "rpc_manager.h"
-
 namespace monitor
 {
     GrpcManagerImple::GrpcManagerImple() {}
@@ -13,9 +14,8 @@ namespace monitor
         _monitorInfo.Clear();
         _monitorInfo = *request;
 
-        // TODO Think Why?
-        std::cout << "Success" << request->soft_irq_size() << std::endl;
-        
+        // std::cout << "SetMonitorInfo Success" << std::endl;
+
         return ::grpc::Status::OK;
     }
 
@@ -25,5 +25,20 @@ namespace monitor
     {
         *response = _monitorInfo;
         return ::grpc::Status::OK;
+    }
+
+    void InitServer()
+    {
+        // 这里后续可以考虑优化成命令行参数传参
+        constexpr char kServerInfo[] = "0.0.0.0:18351";
+
+        grpc::ServerBuilder builder;
+        builder.AddListeningPort(kServerInfo, grpc::InsecureServerCredentials());
+
+        monitor::GrpcManagerImple grpcServer;
+        builder.RegisterService(&grpcServer);
+
+        std::unique_ptr<grpc::Server> server(builder.BuildAndStart());
+        server->Wait();
     }
 } // end of namespace Monitor

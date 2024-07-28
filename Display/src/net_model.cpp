@@ -53,12 +53,8 @@ namespace monitor
         beginResetModel();
         _monitorData.clear();
 
-        std::cout << monitorInfo.net_info_size() << std::endl;
-
-        // TODO 问题所在：net_info_size() 一直为0
         for (int i = 0; i < monitorInfo.net_info_size(); i++)
         {
-            std::cout << "for (int i = 0; i < monitorInfo.net_info_size(); i++)" << std::endl;
             _monitorData.push_back(InsertOneNetInfo(monitorInfo.net_info(i)));
         }
 

@@ -1,7 +1,10 @@
 #include <memory>
 #include <thread>
 #include <vector>
-#include "rpc_client.h"
+
+#include "Client/rpc_client.h"
+#include "Server/rpc_manager.h"
+
 #include "monitor/cpu_load_monitor.h"
 #include "monitor/cpu_softirq_monitor.h"
 #include "monitor/cpu_stat_monitor.h"
@@ -10,6 +13,13 @@
 
 int main()
 {
+    // server
+    // monitor::InitServer();
+    std::unique_ptr<std::thread> server = nullptr;
+    server = std::make_unique<std::thread>(monitor::InitServer);
+    server->detach();
+
+    // monitor
     std::vector<std::shared_ptr<monitor::MonitorInter>> runners;
     runners.emplace_back(new monitor::CpuSoftIrqMonitor());
     runners.emplace_back(new monitor::CpuLoadMonitor());

@@ -12,7 +12,7 @@ namespace monitor
     public:
         CpuLoadMonitor() {}
         void UpdateOnce(monitor::MonitorInfo *monitorInfo);
-        void Stop() override {} // TODO Think Why?
+        void Stop() override {}
         
     private:
         float _load_avg_1;

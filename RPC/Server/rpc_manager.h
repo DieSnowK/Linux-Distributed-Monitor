@@ -26,4 +26,6 @@ namespace monitor
     private:
         monitor::MonitorInfo _monitorInfo;
     };
+
+    void InitServer();
 } // end of namespace Monitor
