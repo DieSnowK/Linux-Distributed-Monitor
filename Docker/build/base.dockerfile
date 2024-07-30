@@ -10,9 +10,6 @@ SHELL ["/bin/bash", "-c"]
 #     apt-get autoclean
 # COPY apt/sources.list /etc/apt/
 
-# RUN sed -i 's|http://mirrors.aliyun.com/ubuntu/|http://mirrors.ustc.edu.cn/ubuntu/|g' /etc/apt/sources.list
-# RUN sed -i 's|http://mirrors.aliyun.com/ubuntu/|http://mirrors.tuna.tsinghua.edu.cn/ubuntu/|g' /etc/apt/sources.list
-
 RUN apt-get update && apt-get upgrade -y  && \
     apt-get install -y \
     htop \
@@ -25,7 +22,7 @@ RUN apt-get update && apt-get upgrade -y  && \
     qtchooser \
     qt5-qmake \
     qtbase5-dev-tools \
-    libstdc++-dev \
+    libstdc++-8-dev \
     libboost-all-dev \
     net-tools \
     vim \
@@ -35,7 +32,7 @@ RUN apt-get install -y \
     libc-ares-dev \
     libssl-dev \
     gcc \
-    g++ \
+    g++-8 \
     make 
 
 RUN apt-get install -y  \
@@ -45,6 +42,9 @@ RUN apt-get install -y  \
     libfontconfig1 \
     libxkbcommon0   \
     libxkbcommon-x11-0
+
+# Set g++-8 as the default compiler
+RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 100
 
 COPY install/cmake /tmp/install/cmake
 RUN /tmp/install/cmake/install_cmake.sh
