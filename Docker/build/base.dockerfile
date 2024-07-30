@@ -6,16 +6,18 @@ ENV TZ=Asia/Shanghai
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt-get clean && \
-    apt-get autoclean
-COPY apt/sources.list /etc/apt/
+# RUN apt-get clean && \
+#     apt-get autoclean
+# COPY apt/sources.list /etc/apt/
 
-RUN apt-get update  && apt-get upgrade -y  && \
+# RUN sed -i 's|http://mirrors.aliyun.com/ubuntu/|http://mirrors.ustc.edu.cn/ubuntu/|g' /etc/apt/sources.list
+# RUN sed -i 's|http://mirrors.aliyun.com/ubuntu/|http://mirrors.tuna.tsinghua.edu.cn/ubuntu/|g' /etc/apt/sources.list
+
+RUN apt-get update && apt-get upgrade -y  && \
     apt-get install -y \
     htop \
     apt-utils \
     curl \
-    cmake \
     git \
     openssh-server \
     build-essential \
@@ -23,15 +25,15 @@ RUN apt-get update  && apt-get upgrade -y  && \
     qtchooser \
     qt5-qmake \
     qtbase5-dev-tools \
+    libstdc++-dev \
     libboost-all-dev \
     net-tools \
     vim \
-    stress 
+    stress
 
 RUN apt-get install -y \
     libc-ares-dev \
     libssl-dev \
-    libre2-dev \
     gcc \
     g++ \
     make 
@@ -43,9 +45,15 @@ RUN apt-get install -y  \
     libfontconfig1 \
     libxkbcommon0   \
     libxkbcommon-x11-0
-    
+
+COPY install/cmake /tmp/install/cmake
+RUN /tmp/install/cmake/install_cmake.sh
+
 COPY install/abseil /tmp/install/abseil
 RUN /tmp/install/abseil/install_abseil.sh
+
+COPY install/re2 /tmp/install/re2
+RUN /tmp/install/re2/install_re2.sh
 
 COPY install/protobuf /tmp/install/protobuf
 RUN /tmp/install/protobuf/install_protobuf.sh

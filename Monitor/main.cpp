@@ -13,13 +13,10 @@
 
 int main()
 {
-    // server
-    // monitor::InitServer();
     std::unique_ptr<std::thread> server = nullptr;
     server = std::make_unique<std::thread>(monitor::InitServer);
     server->detach();
 
-    // monitor
     std::vector<std::shared_ptr<monitor::MonitorInter>> runners;
     runners.emplace_back(new monitor::CpuSoftIrqMonitor());
     runners.emplace_back(new monitor::CpuLoadMonitor());

@@ -18,8 +18,13 @@ gid="$(id -g)"
 
 
 echo "stop and rm docker" 
-docker stop linux_monitor > /dev/null
-docker rm -v -f linux_monitor > /dev/null
+if [ "$(docker ps -a -q -f name=linux_monitor)" ]
+then
+    docker stop linux_monitor > /dev/null
+    docker rm -v -f linux_monitor > /dev/null
+fi
+# docker stop linux_monitor > /dev/null
+# docker rm -v -f linux_monitor > /dev/null
 
 echo "start docker"
 docker run -it -d \
