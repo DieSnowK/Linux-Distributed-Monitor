@@ -27,5 +27,5 @@ namespace monitor
         monitor::MonitorInfo _monitorInfo;
     };
 
-    void InitServer();
+    void InitServer(uint16_t port = 18351);
 } // end of namespace Monitor

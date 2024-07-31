@@ -2,12 +2,22 @@
 
 namespace monitor
 {
-    RpcClient::RpcClient() 
+    // display
+    RpcClient::RpcClient(const std::string& target) 
     {
-        // Constructer can modified later
-        auto channel = ::grpc::CreateChannel("localhost:18351", ::grpc::InsecureChannelCredentials());
+        auto channel = ::grpc::CreateChannel(target, ::grpc::InsecureChannelCredentials());
         _pStub = monitor::GrpcManager::NewStub(channel);
     }
+
+    // monitor
+    // RpcClient::RpcClient(uint16_t port) 
+    // {
+    //     std::string target("localhost:");
+    //     target += std::to_string(port);
+
+    //     auto channel = ::grpc::CreateChannel(target, ::grpc::InsecureChannelCredentials());
+    //     _pStub = monitor::GrpcManager::NewStub(channel);
+    // }
 
     RpcClient::~RpcClient() {}
 
@@ -20,7 +30,7 @@ namespace monitor
         if(!status.ok())
         {
             std::cout << status.error_details() << std::endl;
-            std::cout << "Failed to connect!!!" << std::endl;
+            std::cout << "[SetMonitorInfo] Failed to connect!!!" << std::endl;
         }
     }
 
@@ -33,7 +43,7 @@ namespace monitor
         if (!status.ok())
         {
             std::cout << status.error_details() << std::endl;
-            std::cout << "Failed to connect!!!" << std::endl;
+            std::cout << "[GetMonitorInfo] Failed to connect!!!" << std::endl;
         }
     }
 } // end of namespace monitor

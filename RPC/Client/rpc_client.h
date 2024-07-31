@@ -11,7 +11,9 @@ namespace monitor
     class RpcClient
     {
     public:
-        RpcClient();
+        RpcClient(const std::string &target = "localhost:18351");
+        // RpcClient(uint16_t port = 18351);
+        
         ~RpcClient();
 
         void SetMonitorInfo(const monitor::MonitorInfo &monitorInfo);

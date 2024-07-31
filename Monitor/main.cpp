@@ -11,10 +11,56 @@
 #include "monitor/mem_monitor.h"
 #include "monitor/net_monitor.h"
 
-int main()
+// void Usage()
+// {
+//     std::cout << "Usage:" << std::endl
+//               << "\t./monitor PORT" << std::endl
+//               << "Attention:" << std::endl
+//               << "\tPORT must between 1000 and 65535" << std::endl;
+// }
+
+void Usage()
 {
+    std::cout << "Usage:" << std::endl
+              << "\t./monitor SERVER_IP PORT" << std::endl
+              << "Attention:" << std::endl
+              << "\tPORT must between 1000 and 65535" << std::endl;
+}
+
+int main(int argc, char* argv[])
+{
+    // if (argc != 2)
+    // {
+    //     Usage();
+    //     exit(1);
+    // }
+
+    // int port = std::atoi(argv[1]);
+    // if (port < 1000 || port > 65535)
+    // {
+    //     Usage();
+    //     exit(2);
+    // }
+
+    if (argc != 3)
+    {
+        Usage();
+        exit(1);
+    }
+
+    int port = std::atoi(argv[2]);
+    if (port < 1000 || port > 65535)
+    {
+        Usage();
+        exit(2);
+    }
+
     std::unique_ptr<std::thread> server = nullptr;
-    server = std::make_unique<std::thread>(monitor::InitServer);
+    server = std::make_unique<std::thread>(monitor::InitServer, port);
+    // server = std::make_unique<std::thread>([&port]()
+    // { 
+    //     monitor::InitServer(port); 
+    // });
     server->detach();
 
     std::vector<std::shared_ptr<monitor::MonitorInter>> runners;
@@ -24,7 +70,12 @@ int main()
     runners.emplace_back(new monitor::MemMonitor());
     runners.emplace_back(new monitor::NetMonitor());
 
-    monitor::RpcClient rpc_client;
+    std::string target(argv[1]);
+    target += ":" + std::string(argv[2]);
+
+    std::cout << target << std::endl;
+
+    monitor::RpcClient rpc_client(target);
     char *usrName = getenv("USER");
 
     std::unique_ptr<std::thread> thread = nullptr;
