@@ -29,11 +29,10 @@ namespace monitor
 
     void InitServer(uint16_t port)
     {
-        // TODO consider optimizing it into command line argument parameters
+        // constexpr char kServerInfo[] = "0.0.0.0:18351";
+
         std::string kServerInfo("0.0.0.0:");
         kServerInfo += std::to_string(port);
-
-        // constexpr char kServerInfo[] = "0.0.0.0:18351";
 
         grpc::ServerBuilder builder;
         builder.AddListeningPort(kServerInfo, grpc::InsecureServerCredentials());

@@ -5,9 +5,7 @@ namespace monitor
     bool Utils::ReadFile::ReadLine(std::vector<std::string> *args)
     {
         std::string line;
-        
         std::getline(_ifs, line);
-        // std::cerr << "DEBUG: " << line << std::endl;
 
         if (_ifs.eof() || line.empty())
         {

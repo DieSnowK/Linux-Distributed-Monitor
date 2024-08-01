@@ -2,22 +2,11 @@
 
 namespace monitor
 {
-    // display
     RpcClient::RpcClient(const std::string& target) 
     {
         auto channel = ::grpc::CreateChannel(target, ::grpc::InsecureChannelCredentials());
         _pStub = monitor::GrpcManager::NewStub(channel);
     }
-
-    // monitor
-    // RpcClient::RpcClient(uint16_t port) 
-    // {
-    //     std::string target("localhost:");
-    //     target += std::to_string(port);
-
-    //     auto channel = ::grpc::CreateChannel(target, ::grpc::InsecureChannelCredentials());
-    //     _pStub = monitor::GrpcManager::NewStub(channel);
-    // }
 
     RpcClient::~RpcClient() {}
 
