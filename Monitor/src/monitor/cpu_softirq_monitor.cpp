@@ -5,6 +5,7 @@ namespace monitor
 {
     void CpuSoftIrqMonitor::UpdateOnce(monitor::MonitorInfo *monitorInfo)
     {
+        // 1.Read File
         Utils::ReadFile softirqs_file(std::string("/proc/softirqs"));
         std::vector<std::string> one_softirq;
         std::vector<std::vector<std::string>> softirq;
@@ -15,11 +16,13 @@ namespace monitor
             one_softirq.clear();
         }
 
+        // 2.Analyze the data
         for (int i = 0; i < softirq[0].size() - 1; ++i)
         {
             std::string name = softirq[0][i];
             SoftIrq info;
 
+            // Extract and organize data
             info.cpu_name = name;
             info.hi = std::stoll(softirq[1][i + 1]);
             info.timer = std::stoll(softirq[2][i + 1]);
@@ -39,6 +42,7 @@ namespace monitor
                 SoftIrq &old = iter->second;
                 double period = Utils::SteadyTimeSecond(info.timePoint, old.timePoint);
 
+                // Calculate and set up the transfer data
                 auto one_softirq_msg = monitorInfo->add_soft_irq();
                 one_softirq_msg->set_cpu(info.cpu_name);
                 one_softirq_msg->set_hi((info.hi - old.hi) / period);
@@ -53,6 +57,7 @@ namespace monitor
                 one_softirq_msg->set_rcu((info.rcu - old.rcu) / period);
             }
 
+            // Whatever, the value is updated
             _cpu_softirq_map[name] = info;
         } // end of for (int i = 0; i < softirq[0].size() - 1; ++i)
     }

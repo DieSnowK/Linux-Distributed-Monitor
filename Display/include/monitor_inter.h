@@ -7,7 +7,6 @@ namespace monitor
 {
     class MonitorInterModel : public QAbstractTableModel
     {
-        // Q_OBJECT
     public:
         explicit MonitorInterModel(QObject *parent = nullptr)
             :QAbstractTableModel(parent) 

@@ -11,11 +11,11 @@ import "Cpu_Load.proto";
 message MonitorInfo
 {
     string name = 1;
-    repeated SoftIrq soft_irq = 2;
+    repeated SoftIrq soft_irq = 2; // Multiple CPUS
     CpuLoad cpu_load = 3;
-    repeated CpuStat cpu_stat = 4;
+    repeated CpuStat cpu_stat = 4; // Multiple CPUS
     MemInfo mem_info = 5;
-    repeated NetInfo net_info = 6;
+    repeated NetInfo net_info = 6; // Multiple NICs
 }
 
 service GrpcManager
